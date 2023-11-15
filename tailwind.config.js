@@ -10,15 +10,16 @@ export default {
       base: '16px',
       xl: '24px',
       '2xl': '1.563rem',
-      '3xl': '1.953rem',
-      '4xl': '2.441rem',
+      '3xl': '32px',
+      '4xl': '40px',
       '5xl': '56px',
     },
     extend: {
       fontFamily: {
         'crete': ['Crete Round', 'serif'],
         'poppins': ['Poppins', 'sans-serif'],
-        'roboto': ['Roboto', 'sans-serif']
+        'roboto': ['Roboto', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
       },
       colors: {
         'grey2': '#3c3a39',
