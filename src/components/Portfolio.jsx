@@ -12,6 +12,10 @@ import MediumBlack from '@/assets/Medium-black.svg';
 import TwitterXGrey from '@/assets/Twitter-X-white.svg';
 import TwitterXBlack from '@/assets/Twitter-X-black.svg';
 
+import Rec1 from '@/assets/Rectangle55.svg';
+import Rec2 from '@/assets/Rectangle56.svg';
+import Rec3 from '@/assets/Rectangle57.svg';
+
 import DeathNoteImage from '@/assets/Death-note-L.jpg';
 
 const Portfolio = ()=> {
@@ -25,7 +29,7 @@ const Portfolio = ()=> {
 
     return(
       <div>
-        <div className="w-full bg-black2 pt-[165px] px-6">
+        <div className="w-full bg-black2 pt-[165px] px-[8%]">
           <h1 className="font-crete text-5xl text-orange2 ">
             {message} <br/>
             I'm Gabriel
@@ -75,7 +79,7 @@ const Portfolio = ()=> {
           <h2 className="text-center font-crete text-4xl">
             My recent works
           </h2>
-          <div className="mx-auto w-[85%] border-t border-black-400 mt-4 mb-8"></div>
+          <div className="border-t border-black-400 mt-4 mb-8"></div>
           <div className="">
             <img src={DeathNoteImage} alt="projectImg"></img>
             <h2 className="text-3xl font-crete">Title</h2>
@@ -104,6 +108,42 @@ const Portfolio = ()=> {
             <li className="bg-black opacity-50 px-2 py-1 inline-block font-inter text-white hover:opacity-100 transition-opacity duration-200">Tech 3</li>
           </ul>
           <button className="text-white bg-orange2 font-inter font-bold p-3">See project</button>
+        </div>
+        <div className="flex flex-col w-full bg-black2 pt-[120px] px-[8%] h-[720px]">
+          <h1 className="font-crete text-5xl text-orange2 ">
+            About me
+          </h1>
+          <p className="text-base leading-6 font-inter text-white my-6">This is the about me description. It should say something interesting about me to make recruiters more interested. I need to make sure it is not so descriptive but with the escencial atributes of myself.</p>
+          <button className="text-white bg-orange2 font-inter font-bold p-3 mb-[200px] mt-auto w-[180px]">Get my resume</button>
+          <div className="border-t border-white-400 mb-16"></div>
+        </div>
+        <div className="flex flex-col w-full bg-black2 pt-[60px] px-[8%] h-[920px]">
+          <div className="flex flex-col justify-center items-center">
+            <div className="flex justify-center pr-[10%] my-2">
+              <img src={Rec1} alt="O0" className="object-contain w-5 mx-3"></img>
+              <h2 className="font-bold text-white font-roboto text-3xl">Language</h2>
+            </div>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">JavaScript</h3>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">HTML</h3>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">Tailwind CSS</h3>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">Ruby</h3>
+            <div className="flex justify-center pr-[10%] my-2">
+              <img src={Rec2} alt="O0" className="object-contain w-4 mx-3"></img>
+              <h2 className="font-bold text-white font-roboto text-3xl">Frameworks</h2>
+            </div>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">React.js</h3>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">Ruby on Rails</h3>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">RSpec</h3>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">Capybara</h3>
+            <div className="flex justify-center pr-[10%] my-2">
+              <img src={Rec3} alt="O0" className="object-contain w-4 mx-3"></img>
+              <h2 className="font-bold text-white font-roboto text-3xl">Skills</h2>
+            </div>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">Database management</h3>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">Version control</h3>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">API design</h3>
+            <h3 className="font-inter text-[22px] text-white my-1 leading-9">Web development</h3>
+          </div>
         </div>
       </div>
     );
