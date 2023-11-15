@@ -18,6 +18,8 @@ import Rec3 from '@/assets/Rectangle57.svg';
 
 import DeathNoteImage from '@/assets/Death-note-L.jpg';
 
+import Bird from '@/assets/OrangeFalcon.png';
+
 const Portfolio = ()=> {
   const { message } = useSelector((store) => store.greetings);
 
@@ -46,7 +48,7 @@ const Portfolio = ()=> {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value, // Trim the input value
+      [name]: value,
     }));
   };
 
@@ -84,7 +86,7 @@ const Portfolio = ()=> {
 
     return(
       <div>
-        <div className="w-full bg-black2 pt-[165px] px-[8%]">
+        <div className="min-h-[700px] w-full bg-black bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] bg-[right_9%_top_470px] pt-[165px] px-[8%] bg-[length:200px_200px]">
           <h1 className="font-crete text-5xl text-orange2 ">
             {message} <br/>
             I'm Gabriel
@@ -164,7 +166,7 @@ const Portfolio = ()=> {
           </ul>
           <button className="text-white bg-orange2 font-inter font-bold p-3">See project</button>
         </div>
-        <div className="flex flex-col w-full bg-black2 mt-[120px] pt-[120px] px-[8%] h-[720px]">
+        <div className="flex flex-col w-full bg-black2 mt-[120px] pt-[120px] px-[8%] h-[720px] bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] bg-[right_-10px_top_420px] bg-[length:200px_200px]">
           <h1 className="font-crete text-5xl text-orange2 ">
             About me
           </h1>
@@ -201,7 +203,7 @@ const Portfolio = ()=> {
           </div>
         </div>
         <div className="px-[8%] mt-16">
-          <h2 className="text-center font-inter text-3xl font-bold"> I'm always interested in hearing about new projects. If you'd like to contact me, get in touch so we can talk about new project oportunities</h2>
+          <h2 className="text-center font-inter text-3xl font-bold"> I'm always interested in hearing about new projects. If you'd like to talk about new project oportunities, please feel free to reach out so we can connect</h2>
           {submited ? (<div className="roboto text-2xl text-center my-8">Thank you for your time!</div>) : (<div className="px-[8%] mt-16">
             <form onSubmit={handleSubmit} className="flex flex-col" method="post">
               <input
