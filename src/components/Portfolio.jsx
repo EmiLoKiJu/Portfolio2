@@ -18,8 +18,6 @@ import Rec3 from '@/assets/Rectangle57.svg';
 
 import DeathNoteImage from '@/assets/Death-note-L.jpg';
 
-import Bird from '@/assets/OrangeFalcon.png';
-
 const Portfolio = ()=> {
   const { message } = useSelector((store) => store.greetings);
 
@@ -94,43 +92,77 @@ const Portfolio = ()=> {
           <h2 className="font-roboto text-xl text-white2 mt-2">I'm a Software Developer</h2>
           <h3 className="font-poppins text-base text-white mt-2 leading-6">I can help you building a feature, product or website, with my programming skills and my problem solving abilities.</h3>
           <div className="flex pt-4 pb-[165px]">
-            <img
-              className="w-7 p-[5px] object-contain"
-              src={githubSrc}
-              alt="Github Logo"
-              onMouseEnter={() => setGithubSrc(GithubBlack)}
-              onMouseLeave={() => setGithubSrc(GithubGrey)}
-            />
-            <img
-              className="w-7 p-1 object-contain"
-              src={linkedInSrc}
-              alt="LinkedIn Logo"
-              onMouseEnter={() => setLinkedInSrc(LinkedInBlack)}
-              onMouseLeave={() => setLinkedInSrc(LinkedInGrey)}
-            />
-            <img
-              className="w-7 p-1 object-contain"
-              src={angelistSrc}
-              alt="Angelist Logo"
-              onMouseEnter={() => setAngelistSrc(AngelistBlack)}
-              onMouseLeave={() => setAngelistSrc(AngelistGrey)}
-            />
-            <img
-              className="w-7 object-contain"
-              src={xSrc}
-              alt="X Logo"
-              onMouseEnter={() => setXSrc(TwitterXBlack)}
-              onMouseLeave={() => setXSrc(TwitterXGrey)}
-            />
-            <img
-              className="w-7 p-1 object-contain"
-              src={mediumSrc}
-              alt="Medium Logo"
-              onMouseEnter={() => setMediumSrc(MediumBlack)}
-              onMouseLeave={() => setMediumSrc(MediumGrey)}
-            />
+            <a
+              className="flex"
+              href="https://github.com/EmiLoKiJu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="w-7 p-[5px] object-contain"
+                src={githubSrc}
+                alt="Github Logo"
+                onMouseEnter={() => setGithubSrc(GithubBlack)}
+                onMouseLeave={() => setGithubSrc(GithubGrey)}
+              />
+            </a>
+            <a
+              className="flex"
+              href="https://www.linkedin.com/in/grozas/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="w-7 p-1 object-contain"
+                src={linkedInSrc}
+                alt="LinkedIn Logo"
+                onMouseEnter={() => setLinkedInSrc(LinkedInBlack)}
+                onMouseLeave={() => setLinkedInSrc(LinkedInGrey)}
+              />
+            </a>
+            <a
+              className="flex"
+              href="https://wellfound.com/u/gabriel-rozas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="w-7 p-1 object-contain"
+                src={angelistSrc}
+                alt="Angelist Logo"
+                onMouseEnter={() => setAngelistSrc(AngelistBlack)}
+                onMouseLeave={() => setAngelistSrc(AngelistGrey)}
+              />
+            </a>
+            <a
+              className="flex"
+              href="https://twitter.com/GabrielRozas12"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="w-7 object-contain"
+                src={xSrc}
+                alt="X Logo"
+                onMouseEnter={() => setXSrc(TwitterXBlack)}
+                onMouseLeave={() => setXSrc(TwitterXGrey)}
+              />
+            </a>
+            <a
+              className="flex"
+              href="https://medium.com/@gabrielrozas1996"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="w-7 p-1 object-contain"
+                src={mediumSrc}
+                alt="Medium Logo"
+                onMouseEnter={() => setMediumSrc(MediumBlack)}
+                onMouseLeave={() => setMediumSrc(MediumGrey)}
+              />
+            </a>
           </div>
-          
         </div>
         <div className="w-[85%] mx-auto mt-[120px] mb-6">
           <h2 className="text-center font-crete text-4xl">
@@ -242,41 +274,76 @@ const Portfolio = ()=> {
           </div>)}
         </div>
         <div className="mx-auto flex justify-center pt-4 pb-[165px]">
-          <img
-            className="w-7 p-[5px] object-contain m-2"
-            src={githubSrc2}
-            alt="Github Logo"
-            onMouseEnter={() => setGithubSrc2(GithubGrey)}
-            onMouseLeave={() => setGithubSrc2(GithubBlack)}
-          />
-          <img
-            className="w-7 p-1 object-contain m-2"
-            src={linkedInSrc2}
-            alt="LinkedIn Logo"
-            onMouseEnter={() => setLinkedInSrc2(LinkedInGrey)}
-            onMouseLeave={() => setLinkedInSrc2(LinkedInBlack)}
-          />
-          <img
-            className="w-7 p-1 object-contain m-2"
-            src={angelistSrc2}
-            alt="Angelist Logo"
-            onMouseEnter={() => setAngelistSrc2(AngelistGrey)}
-            onMouseLeave={() => setAngelistSrc2(AngelistBlack)}
-          />
-          <img
-            className="w-7 object-contain m-2"
-            src={xSrc2}
-            alt="X Logo"
-            onMouseEnter={() => setXSrc2(TwitterXGrey)}
-            onMouseLeave={() => setXSrc2(TwitterXBlack)}
-          />
-          <img
-            className="w-7 p-1 object-contain m-2"
-            src={mediumSrc2}
-            alt="Medium Logo"
-            onMouseEnter={() => setMediumSrc2(MediumGrey)}
-            onMouseLeave={() => setMediumSrc2(MediumBlack)}
-          />
+          <a
+            className="flex"
+            href="https://github.com/EmiLoKiJu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="w-7 p-[5px] object-contain m-2"
+              src={githubSrc2}
+              alt="Github Logo"
+              onMouseEnter={() => setGithubSrc2(GithubGrey)}
+              onMouseLeave={() => setGithubSrc2(GithubBlack)}
+            />
+          </a>
+          <a
+            className="flex"
+            href="https://www.linkedin.com/in/grozas/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="w-7 p-1 object-contain m-2"
+              src={linkedInSrc2}
+              alt="LinkedIn Logo"
+              onMouseEnter={() => setLinkedInSrc2(LinkedInGrey)}
+              onMouseLeave={() => setLinkedInSrc2(LinkedInBlack)}
+            />
+          </a>
+          <a
+            className="flex"
+            href="https://wellfound.com/u/gabriel-rozas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="w-7 p-1 object-contain m-2"
+              src={angelistSrc2}
+              alt="Angelist Logo"
+              onMouseEnter={() => setAngelistSrc2(AngelistGrey)}
+              onMouseLeave={() => setAngelistSrc2(AngelistBlack)}
+            />
+          </a>
+          <a
+            className="flex"
+            href="https://twitter.com/GabrielRozas12"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="w-7 object-contain m-2"
+              src={xSrc2}
+              alt="X Logo"
+              onMouseEnter={() => setXSrc2(TwitterXGrey)}
+              onMouseLeave={() => setXSrc2(TwitterXBlack)}
+            />
+          </a>
+          <a
+            className="flex"
+            href="https://medium.com/@gabrielrozas1996"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="w-7 p-1 object-contain m-2"
+              src={mediumSrc2}
+              alt="Medium Logo"
+              onMouseEnter={() => setMediumSrc2(MediumGrey)}
+              onMouseLeave={() => setMediumSrc2(MediumBlack)}
+            />
+          </a>
         </div>
       </div>
     );
