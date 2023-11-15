@@ -87,9 +87,9 @@ const Portfolio = ()=> {
         <div className="min-h-[700px] w-full bg-black bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] bg-[right_9%_top_470px] pt-[165px] px-[8%] bg-[length:200px_200px]">
           <h1 className="font-crete text-5xl text-orange2 ">
             {message} <br/>
-            I`&apos;`m Gabriel
+            I&apos;m Gabriel
           </h1>
-          <h2 className="font-roboto text-xl text-white2 mt-2">I`&apos;`m a Software Developer</h2>
+          <h2 className="font-roboto text-xl text-white2 mt-2">I&apos;m a Software Developer</h2>
           <h3 className="font-poppins text-base text-white mt-2 leading-6">I can help you building a feature, product or website, with my programming skills and my problem solving abilities.</h3>
           <div className="flex pt-4 pb-[165px]">
             <a
@@ -235,7 +235,7 @@ const Portfolio = ()=> {
           </div>
         </div>
         <div className="px-[8%] mt-16">
-          <h2 className="text-center font-inter text-3xl font-bold"> I`&apos;`m always interested in hearing about new projects. If you`&apos;`d like to talk about new project oportunities, please feel free to reach out so we can connect</h2>
+          <h2 className="text-center font-inter text-3xl font-bold"> I&apos;m always interested in hearing about new projects. If you&apos;d like to talk about new project oportunities, please feel free to reach out so we can connect</h2>
           {submited ? (<div className="roboto text-2xl text-center my-8">Thank you for your time!</div>) : (<div className="px-[8%] mt-16">
             <form onSubmit={handleSubmit} className="flex flex-col" method="post">
               <input
