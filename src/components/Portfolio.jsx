@@ -84,7 +84,7 @@ const Portfolio = ()=> {
 
     return(
       <div>
-        <div className="min-h-[700px] w-full bg-black bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] bg-[right_9%_top_470px] pt-[165px] px-[8%] bg-[length:200px_200px]">
+        <div id="top-section" className="min-h-[700px] w-full bg-black bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] bg-[right_9%_top_470px] pt-[165px] px-[8%] bg-[length:200px_200px]">
           <h1 className="font-crete text-5xl text-orange2 ">
             {message} <br/>
             I&apos;m Gabriel
@@ -164,7 +164,7 @@ const Portfolio = ()=> {
             </a>
           </div>
         </div>
-        <div className="w-[85%] mx-auto mt-[120px] mb-6">
+        <div id="projects-section" className="w-[85%] mx-auto pt-[120px] mb-6">
           <h2 className="text-center font-crete text-4xl">
             My recent works
           </h2>
@@ -184,7 +184,7 @@ const Portfolio = ()=> {
             <button className="text-white bg-orange2 font-inter font-bold p-3">See project</button>
           </div>
         </div>
-        <div className="relative flex flex-col w-[85%] mx-auto h-[386px] bg-[url('@/assets/Death-note-Kira-Misa.jpg')] bg-no-repeat bg-center bg-cover">
+        <div className="z-30 relative flex flex-col w-[85%] mx-auto h-[386px] bg-[url('@/assets/Death-note-Kira-Misa.jpg')] bg-no-repeat bg-center bg-cover">
           <div className="absolute inset-0 h-[338px] bg-gradient-to-t from-black to-transparent opacity-50 hover:opacity-0 transition-opacity duration-200"></div>
           <h2 className="w-[90%] mx-auto text-3xl font-crete text-white mt-[72px]">Title</h2>
           <p className="w-[90%] mx-auto text-base font-inter text-white leading-6 bg-transparent hover:bg-black opacity-70 transition-opacity duration-200 transition-colors duration-200">Description of the project that I have to make it long enough to explain all the features the project has</p>
@@ -198,7 +198,7 @@ const Portfolio = ()=> {
           </ul>
           <button className="text-white bg-orange2 font-inter font-bold p-3">See project</button>
         </div>
-        <div className="flex flex-col w-full bg-black2 mt-[120px] pt-[120px] px-[8%] h-[720px] bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] bg-[right_-10px_top_420px] bg-[length:200px_200px]">
+        <div id="about-me-section" className="flex flex-col w-full bg-black2 mt-[120px] pt-[120px] px-[8%] h-[720px] bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] bg-[right_-10px_top_420px] bg-[length:200px_200px]">
           <h1 className="font-crete text-5xl text-orange2 ">
             About me
           </h1>
@@ -234,10 +234,10 @@ const Portfolio = ()=> {
             <h3 className="font-inter text-[22px] text-white my-1 leading-9">Web development</h3>
           </div>
         </div>
-        <div className="px-[8%] mt-16">
+        <div className="px-[8%] pt-16">
           <h2 className="text-center font-inter text-3xl font-bold"> I&apos;m always interested in hearing about new projects. If you&apos;d like to talk about new project oportunities, please feel free to reach out so we can connect</h2>
           {submited ? (<div className="roboto text-2xl text-center my-8">Thank you for your time!</div>) : (<div className="px-[8%] mt-16">
-            <form onSubmit={handleSubmit} className="flex flex-col" method="post">
+            <form id="contact-me-section" onSubmit={handleSubmit} className="flex flex-col" method="post">
               <input
                 className="pl-4 mt-16 font-inter"
                 type="text"
@@ -273,7 +273,7 @@ const Portfolio = ()=> {
             </form>
           </div>)}
         </div>
-        <div className="mx-auto flex justify-center pt-4 pb-[165px]">
+        <div className="mx-auto flex justify-center pt-4 pb-[115px]">
           <a
             className="flex"
             href="https://github.com/EmiLoKiJu"
