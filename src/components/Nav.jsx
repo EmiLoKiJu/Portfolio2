@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types';
 
 import Logo from '@/assets/Logosmall.png'
 import menu from '@/assets/menu.svg'
@@ -49,6 +50,11 @@ const MenuElement = ({ menuHandler, setHamb }) => {
   );
 };
 
+MenuElement.propTypes = {
+  menuHandler: PropTypes.func.isRequired,
+  setHamb: PropTypes.func.isRequired,
+};
+
 const Nav = ()=> {
   const [hamb, setHamb] = useState(menu);
   const [xMenu, setXMenu] = useState(xmenu);
@@ -87,7 +93,7 @@ const Nav = ()=> {
         >
         </img>
         <div className='hidden md:flex'>
-          <MenuElement />
+          <MenuElement menuHandler={menuHandler} setHamb={setHamb}/>
         </div>
         
       </nav>

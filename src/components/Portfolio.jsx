@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 import GithubGrey from '@/assets/Github-grey.svg';
 import GithubBlack from '@/assets/Github-black.svg';
@@ -100,6 +101,13 @@ const Portfolio = ()=> {
     );
   };
 
+  ProjectCont.propTypes = {
+    bgurl: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    techs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  };
+
   const AboutSection = ({ figure, category, atributes}) => {
     return (
       <div className="flex flex-col items-center">
@@ -112,6 +120,12 @@ const Portfolio = ()=> {
         ))}
       </div>
     );
+  };
+
+  AboutSection.propTypes = {
+    figure: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    atributes: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   return(
@@ -236,17 +250,17 @@ const Portfolio = ()=> {
         <ProjectCont 
           bgurl={'@/assets/Death-note-Kira-Misa.jpg'} 
           title={'titulo1'} 
-          description={'description1'} 
+          description={'description1 is very long'} 
           techs={['tech1', 'tech2', 'tech3', 'tech4']} 
         />
         <ProjectCont 
           bgurl={'@/assets/Death-note-Kira-Misa.jpg'} 
           title={'titulo2'} 
-          description={'description1'} 
+          description={'description 2 is very tiny but it works to make it look like fine'} 
           techs={['tech1', 'tech2', 'tech3']} 
         />
         <ProjectCont 
-          bgurl={'@/assets/Death-note-Kira-Misa.jpg'} 
+          bgurl={'@/assets/Death-note-L.jpg'} 
           title={'titulo1'} 
           description={'description1'} 
           techs={['tech1']} 
