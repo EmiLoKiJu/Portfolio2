@@ -84,14 +84,16 @@ const Portfolio = ()=> {
 
     return(
       <div>
-        <div id="top-section" className="min-h-[700px] w-full bg-black bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] bg-[right_9%_top_470px] pt-[165px] px-[8%] bg-[length:200px_200px]">
+        <div id="top-section" className="flex flex-col md:flex-row min-h-[700px] w-full bg-black bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] bg-[right_9%_top_470px] pt-[165px] px-[8%] bg-[length:200px_200px]">
+          <div className="flex flex-col">
           <h1 className="font-crete text-5xl text-orange2 ">
             {message} <br/>
             I&apos;m Gabriel
           </h1>
           <h2 className="font-roboto text-xl text-white2 mt-2">I&apos;m a Software Developer</h2>
-          <h3 className="font-poppins text-base text-white mt-2 leading-6">I can help you building a feature, product or website, with my programming skills and my problem solving abilities.</h3>
-          <div className="flex pt-4 pb-[165px]">
+          <h3 className="font-poppins text-base text-white mt-2 leading-6 max-w-[400px]">I can help you building a feature, product or website, with my programming skills and my problem solving abilities.</h3>
+          </div>
+          <div className="flex pt-4 pb-[165px] order-last md:order-first md:flex-col md:ml-[-6%] md:mr-[4%] md:mt-4">
             <a
               className="flex"
               href="https://github.com/EmiLoKiJu"
@@ -99,7 +101,7 @@ const Portfolio = ()=> {
               rel="noopener noreferrer"
             >
               <img
-                className="w-7 p-[5px] object-contain"
+                className="w-7 p-[5px] object-contain md:my-2"
                 src={githubSrc}
                 alt="Github Logo"
                 onMouseEnter={() => setGithubSrc(GithubBlack)}
@@ -113,7 +115,7 @@ const Portfolio = ()=> {
               rel="noopener noreferrer"
             >
               <img
-                className="w-7 p-1 object-contain"
+                className="w-7 p-1 object-contain md:my-2"
                 src={linkedInSrc}
                 alt="LinkedIn Logo"
                 onMouseEnter={() => setLinkedInSrc(LinkedInBlack)}
@@ -127,7 +129,7 @@ const Portfolio = ()=> {
               rel="noopener noreferrer"
             >
               <img
-                className="w-7 p-1 object-contain"
+                className="w-7 p-1 object-contain md:my-2"
                 src={angelistSrc}
                 alt="Angelist Logo"
                 onMouseEnter={() => setAngelistSrc(AngelistBlack)}
@@ -141,7 +143,7 @@ const Portfolio = ()=> {
               rel="noopener noreferrer"
             >
               <img
-                className="w-7 object-contain"
+                className="w-7 object-contain md:my-2"
                 src={xSrc}
                 alt="X Logo"
                 onMouseEnter={() => setXSrc(TwitterXBlack)}
@@ -155,7 +157,7 @@ const Portfolio = ()=> {
               rel="noopener noreferrer"
             >
               <img
-                className="w-7 p-1 object-contain"
+                className="w-7 p-1 object-contain md:my-2"
                 src={mediumSrc}
                 alt="Medium Logo"
                 onMouseEnter={() => setMediumSrc(MediumBlack)}
