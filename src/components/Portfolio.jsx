@@ -292,44 +292,53 @@ const Portfolio = ()=> {
           <AboutSection figure={Rec3} category={'Skills'} atributes={['Database management', 'Version control', 'API design', 'Web development']} />
         </div>
       </div>
-      <div className="px-[8%] pt-16">
-        <h2 className="text-center font-inter text-3xl font-bold"> I&apos;m always interested in hearing about new projects. If you&apos;d like to talk about new project oportunities, please feel free to reach out so we can connect</h2>
-        {submited ? (<div className="roboto text-2xl text-center my-8">Thank you for your time!</div>) : (<div className="px-[8%] mt-16">
-          <form id="contact-me-section" onSubmit={handleSubmit} className="flex flex-col" method="post">
-            <input
-              className="pl-4 mt-16 font-inter"
-              type="text"
-              id="name"
-              name="user_name"
-              placeholder="Full name"
-              value={formData.user_name}
-              onChange={handleChange}
-            />
-            <div className="border-t border-black-400 mt-4 mb-8"></div>
-            <input
-              className="pl-4 font-inter"
-              id="mail"
-              name="user_email"
-              placeholder="Email address"
-              value={formData.user_email}
-              onChange={handleChange}
-            />
-            <small></small>
-            <div className="border-t border-black-400 mt-4 mb-8"></div>
-            <textarea
-              className="pl-4 font-inter"
-              id="msg"
-              name="user_message"
-              placeholder="Write me something..."
-              value={formData.user_message}
-              onChange={handleChange}
-            ></textarea>
-            {errorMessage && <p className="text-red-500 font-inter pl-4">{errorMessage}</p>}
-            <button className="mx-auto text-white bg-orange2 font-inter font-bold p-3 mb-[70px] mt-8 w-[160px]" type="submit">
-              Get in touch
-            </button>
-          </form>
-        </div>)}
+      <div className="px-[8%] pt-16 md:pt-24">
+        <div className="flex flex-col md:flex-row">
+          <h2 className="max-w-[600px] text-center font-inter text-3xl font-bold"> I&apos;m always interested in hearing about new projects. If you&apos;d like to talk about new project oportunities, please feel free to reach out so we can connect</h2>
+          {submited ? 
+          (
+            <div className="roboto text-2xl text-center my-8">Thank you for your time!</div>
+          ) 
+          : 
+          (
+            <div className="w-full px-[8%] mt-16 md:mt-0 md:px-8">
+              <form id="contact-me-section" onSubmit={handleSubmit} className="flex flex-col" method="post">
+                <input
+                  className="pl-4 mt-16 font-inter md:mt-0"
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  placeholder="Full name"
+                  value={formData.user_name}
+                  onChange={handleChange}
+                />
+                <div className="border-t border-black-400 mt-4 mb-8"></div>
+                <input
+                  className="pl-4 font-inter"
+                  id="mail"
+                  name="user_email"
+                  placeholder="Email address"
+                  value={formData.user_email}
+                  onChange={handleChange}
+                />
+                <small></small>
+                <div className="border-t border-black-400 mt-4 mb-8"></div>
+                <textarea
+                  className="pl-4 font-inter"
+                  id="msg"
+                  name="user_message"
+                  placeholder="Write me something..."
+                  value={formData.user_message}
+                  onChange={handleChange}
+                ></textarea>
+                {errorMessage && <p className="text-red-500 font-inter pl-4">{errorMessage}</p>}
+                <button className="mx-auto text-white bg-orange2 font-inter font-bold p-3 mb-[70px] mt-8 w-[160px] md:mx-0" type="submit">
+                  Get in touch
+                </button>
+              </form>
+            </div>
+          )}
+        </div>
       </div>
       <div className="mx-auto flex justify-center pt-4 pb-[115px]">
         <a
