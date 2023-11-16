@@ -193,23 +193,29 @@ const Portfolio = ()=> {
         </div>
       </div>
       <div id="projects-section" className="w-[85%] mx-auto pt-[80px] mb-6">
-        <h2 className="text-center font-crete text-4xl">
-          My recent works
-        </h2>
-        <div className="border-t border-black-400 mt-4 mb-8"></div>
-        <div className="">
-          <img className="max-h-[400px] object-contain" src={DeathNoteImage} alt="projectImg"></img>
-          <h2 className="text-3xl font-crete">Title</h2>
-          <p className="text-base leading-6 font-inter">Description of the project that I have to make it long enough to explain all the features the project has</p>
-          <ul className="flex flex-wrap justify-start gap-2 my-3">
-            <li className="border px-2 py-1 inline-block font-inter">Tech 1</li>
-            <li className="border px-2 py-1 inline-block font-inter">Tech 2</li>
-            <li className="border px-2 py-1 inline-block font-inter">Tech 3</li>
-            <li className="border px-2 py-1 inline-block font-inter">Tech 1</li>
-            <li className="border px-2 py-1 inline-block font-inter">Tech 2</li>
-            <li className="border px-2 py-1 inline-block font-inter">Tech 3</li>
-          </ul>
-          <button className="text-white bg-orange2 font-inter font-bold p-3">See project</button>
+        <div className="flex flex-col md:flex-row md:w-full md:justify-between">
+          <h2 className="text-center font-crete text-4xl">
+            My recent works
+          </h2>
+          <div className="border-t-2 border-black-400 md:flex-1 md:ml-6 md:my-auto"></div>
+        </div>
+        
+        <div className="flex flex-col md:flex-row mt-12">
+          <img className="max-w-[680px] object-cover md:w-2/3" src={DeathNoteImage} alt="projectImg"></img>
+          <div className="flex flex-col mx-6">
+            <h2 className="text-3xl font-crete">Title</h2>
+            <p className="text-base leading-6 font-inter">Description of the project that I have to make it long enough to explain all the features the project has</p>
+            <ul className="flex flex-wrap justify-start gap-2 my-3">
+              <li className="border px-2 py-1 inline-block font-inter">Tech 1</li>
+              <li className="border px-2 py-1 inline-block font-inter">Tech 2</li>
+              <li className="border px-2 py-1 inline-block font-inter">Tech 3</li>
+              <li className="border px-2 py-1 inline-block font-inter">Tech 1</li>
+              <li className="border px-2 py-1 inline-block font-inter">Tech 2</li>
+              <li className="border px-2 py-1 inline-block font-inter">Tech 3</li>
+            </ul>
+            <button className="text-white bg-orange2 font-inter font-bold p-3">See project</button>
+          </div>
+          
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[85%] mx-auto">
