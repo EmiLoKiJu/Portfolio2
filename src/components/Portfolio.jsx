@@ -234,10 +234,10 @@ const Portfolio = ()=> {
             <h3 className="font-inter text-[22px] text-white my-1 leading-9">Web development</h3>
           </div>
         </div>
-        <div id="contact-me-section" className="px-[8%] pt-16">
+        <div className="px-[8%] pt-16">
           <h2 className="text-center font-inter text-3xl font-bold"> I&apos;m always interested in hearing about new projects. If you&apos;d like to talk about new project oportunities, please feel free to reach out so we can connect</h2>
           {submited ? (<div className="roboto text-2xl text-center my-8">Thank you for your time!</div>) : (<div className="px-[8%] mt-16">
-            <form onSubmit={handleSubmit} className="flex flex-col" method="post">
+            <form id="contact-me-section" onSubmit={handleSubmit} className="flex flex-col" method="post">
               <input
                 className="pl-4 mt-16 font-inter"
                 type="text"
@@ -273,7 +273,7 @@ const Portfolio = ()=> {
             </form>
           </div>)}
         </div>
-        <div className="mx-auto flex justify-center pt-4 pb-[165px]">
+        <div className="mx-auto flex justify-center pt-4 pb-[115px]">
           <a
             className="flex"
             href="https://github.com/EmiLoKiJu"
