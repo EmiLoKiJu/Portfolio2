@@ -46,8 +46,8 @@ const Nav = ()=> {
       </nav>
       { menustate &&
         ( 
-          <div className='top-11 fixed h-full w-full bg-grey2'>
-            <a href="#top-section" onClick={() => {
+          <div className='top-11 fixed h-full w-full bg-grey2 p-6'>
+            <a href="#top-section" className='' onClick={() => {
               menuHandler();
               setHamb(menu);
               }}>
@@ -55,6 +55,7 @@ const Nav = ()=> {
                 Back to the top
               </div>
             </a>
+            <div className="border-t border-[#6f6c6b] my-2"></div>
             <a href="#projects-section" onClick={() => {
               menuHandler();
               setHamb(menu);
@@ -63,6 +64,7 @@ const Nav = ()=> {
                 Projects
               </div>
             </a>
+            <div className="border-t border-[#6f6c6b] my-2"></div>
             <a href="#about-me-section" onClick={() => {
               menuHandler();
               setHamb(menu);
@@ -71,6 +73,7 @@ const Nav = ()=> {
                 About me
               </div>
             </a>
+            <div className="border-t border-[#6f6c6b] my-2"></div>
             <a href="#contact-me-section" onClick={() => {
               menuHandler();
               setHamb(menu);
@@ -79,6 +82,7 @@ const Nav = ()=> {
                 Contact me
               </div>
             </a>
+            <div className="border-t border-[#6f6c6b] my-2"></div>
           </div>
         )
         
