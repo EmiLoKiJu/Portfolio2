@@ -100,6 +100,20 @@ const Portfolio = ()=> {
     );
   };
 
+  const AboutSection = ({ figure, category, atributes}) => {
+    return (
+      <div className="flex flex-col items-center">
+        <div className="flex justify-center pr-[8%] my-2">
+          <img src={figure} alt="O0" className="object-contain w-5 mx-3"></img>
+          <h2 className="font-bold text-white font-roboto text-3xl">{category}</h2>
+        </div>
+        {atributes.map((atribute, index) => (
+          <h3 key={index} className="font-inter text-[22px] text-white my-1 leading-9">{atribute}</h3>
+        ))}
+      </div>
+    );
+  };
+
   return(
     <div>
       <div id="top-section" 
@@ -271,32 +285,11 @@ const Portfolio = ()=> {
         <button className="text-white bg-orange2 font-inter font-bold p-3 mb-[260px] mt-auto w-[180px]">Get my resume</button>
         <div className="border-t border-white-400 mb-16"></div>
       </div>
-      <div className="flex flex-col w-full bg-black2 pt-[60px] px-[8%] h-[920px]">
-        <div className="flex flex-col justify-center items-center">
-          <div className="flex justify-center pr-[8%] my-2">
-            <img src={Rec1} alt="O0" className="object-contain w-5 mx-3"></img>
-            <h2 className="font-bold text-white font-roboto text-3xl">Language</h2>
-          </div>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">JavaScript</h3>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">HTML</h3>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">Tailwind CSS</h3>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">Ruby</h3>
-          <div className="flex justify-center pr-[8%] my-2">
-            <img src={Rec2} alt="O0" className="object-contain w-4 mx-3"></img>
-            <h2 className="font-bold text-white font-roboto text-3xl">Frameworks</h2>
-          </div>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">React.js</h3>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">Ruby on Rails</h3>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">RSpec</h3>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">Capybara</h3>
-          <div className="flex justify-center pr-[8%] my-2">
-            <img src={Rec3} alt="O0" className="object-contain w-4 mx-3"></img>
-            <h2 className="font-bold text-white font-roboto text-3xl">Skills</h2>
-          </div>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">Database management</h3>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">Version control</h3>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">API design</h3>
-          <h3 className="font-inter text-[22px] text-white my-1 leading-9">Web development</h3>
+      <div className="flex flex-col w-full bg-black2 pt-[60px] px-[8%] h-[920px] lg:h-[520px]">
+        <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-around lg:mt-12">
+          <AboutSection figure={Rec1} category={'Languages'} atributes={['Javascript', 'HTML', 'Tailwind CSS', 'Ruby']} />
+          <AboutSection figure={Rec2} category={'Frameworks'} atributes={['React.js', 'Ruby on Rails', 'RSpec', 'Capybara']} />
+          <AboutSection figure={Rec3} category={'Skills'} atributes={['Database management', 'Version control', 'API design', 'Web development']} />
         </div>
       </div>
       <div className="px-[8%] pt-16">
