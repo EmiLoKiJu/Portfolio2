@@ -84,7 +84,7 @@ const Portfolio = ()=> {
     }
   };
 
-  const ProjectCont = ({ bgurl, title, description, techs }) => {
+  const ProjectCont = ({ title, description, techs }) => {
     return (
       <>
         <div className="absolute inset-0 h-[338px] bg-gradient-to-t from-black to-transparent opacity-50 hover:opacity-0 transition-opacity duration-200"></div>
@@ -103,7 +103,6 @@ const Portfolio = ()=> {
   };
 
   ProjectCont.propTypes = {
-    bgurl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     techs: PropTypes.arrayOf(PropTypes.string).isRequired,
