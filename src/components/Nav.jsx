@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types';
 
-import Logo from '@/assets/Logosmall.png'
+import Logo from '@/assets/Logo1small2.png'
 import menu from '@/assets/menu.svg'
 import menuhover from '@/assets/menuhover.svg'
 import xmenu from '@/assets/x-button.svg'
