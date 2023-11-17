@@ -15,6 +15,9 @@ import MediumBlack from '@/assets/Medium-black.svg';
 import TwitterXGrey from '@/assets/Twitter-X-white.svg';
 import TwitterXBlack from '@/assets/Twitter-X-black.svg';
 
+import githubwhite from '@/assets/githubwhite.svg';
+import seelive from '@/assets/seelive.svg';
+
 import xmenu from '@/assets/x-button.svg'
 import xmenuhover from '@/assets/x-button2.svg'
 
@@ -145,12 +148,12 @@ const Portfolio = ()=> {
     <div>
       { popupstate.isopen &&
         (
-          <div className='z-50 top-0 right-0 fixed h-full w-full bg-transparent backdrop-blur'>
+          <div className='z-50 top-0 right-0 fixed w-full bg-transparent backdrop-blur'>
             <div className="bg-white my-12 mx-4 h-3/4">
-              <div className="mx-4">
+              <div className="px-4 py-2">
                 <div className="flex flex-col">
-                  <div className="flex justify-between">
-                    <h2>{popupstate.title}</h2>
+                  <div className="flex justify-between mb-8 md:mb-2">
+                    <h2 className="font-roboto font-bold text-3xl">{popupstate.title}</h2>
                     <img
                       className="w-11 p-3 object-contain"
                       src={xMenu}
@@ -161,25 +164,30 @@ const Portfolio = ()=> {
                     ></img>
                   </div>
                   
-                  <ul className="mt-auto mb-4 w-[90%] mx-auto flex flex-wrap justify-start gap-2">
+                  <ul className="mb-4 w-full mx-auto flex flex-wrap justify-start gap-2">
                   {popupstate.techs.map((tech, index) => (
-                    <li key={index} className="bg-black opacity-50 px-2 py-1 inline-block font-inter text-white hover:opacity-100 transition-opacity duration-200">
+                    <li key={index} className="bg-white px-2 py-1 inline-block font-inter text-black border-2 border-[#979493]">
                       {tech}
                     </li>
                   ))}
                   </ul>
-                  <img src={popupstate.imgurl}></img>
-                  
-                </div>
-                <p>{popupstate.description}</p>
-                <div className="flex justify-between">
-                    <button className="text-white bg-orange2 font-inter font-bold py-3 mb-[70px] mt-8 w-[120px]">
-                      See live
-                    </button>
-                    <button className="text-white bg-orange2 font-inter font-bold p-3 mb-[70px] mt-8 w-[120px]">
-                      See code
-                    </button>
+                  <div className="flex flex-col md:flex-row">
+                    <img src={popupstate.imgurl} alt="coverimg" className="max-w-[400px] object-cover md:w-2/3 md:max-w-[800px] mb-3 md:mr-4"></img>
+                    <div className="">
+                      <p>{popupstate.description}</p>
+                      <div className="flex justify-between flex-wrap">
+                        <button className="flex pl-4 text-white bg-orange2 font-inter font-bold py-3 mb-4 mt-4 w-[130px]">
+                          See live
+                          <img src={seelive} alt="liveicon" className="ml-2"></img>
+                        </button>
+                        <button className="flex pl-4 text-white bg-orange2 font-inter font-bold p-3 mb-4 mt-4 w-[155px]">
+                          See source
+                          <img src={githubwhite} alt="liveicon" className="ml-4 my-auto"></img>
+                        </button>
+                      </div>
+                    </div>
                   </div>
+                </div>
               </div>
             </div>
           </div>
@@ -310,7 +318,7 @@ const Portfolio = ()=> {
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-Kira-Misa.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
             title={'titulo1'} 
-            description={'description1 is very long and I will have to make it long so the first element shows a lot of content'} 
+            description={'description1 is very long and I will have to make it long so the first element shows a lot of content description1 is very long and I will have to make it long so the first element shows a lot of content '} 
             imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
             techs={['tech1', 'tech2']} 
           />
