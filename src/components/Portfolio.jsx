@@ -26,7 +26,7 @@ import Rec2 from '@/assets/Rectangle56.svg';
 import Rec3 from '@/assets/Rectangle57.svg';
 
 import DeathNoteImage from '@/assets/Death-note-L.jpg';
-// import kiramisa from '@/assets/Death-note-Kira-Misa.jpg';
+import kiramisa from '@/assets/Death-note-Kira-Misa.jpg';
 
 const Portfolio = ()=> {
   const dispatch = useDispatch();
@@ -320,7 +320,7 @@ const Portfolio = ()=> {
           <ProjectCont 
             title={'titulo1'} 
             description={'description1 is very long and I will have to make it long so the first element shows a lot of content description1 is very long and I will have to make it long so the first element shows a lot of content '} 
-            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
+            imgurl={kiramisa}
             techs={['tech1', 'tech2']} 
           />
         </div>
@@ -328,7 +328,7 @@ const Portfolio = ()=> {
           <ProjectCont 
             title={'titulo3 y que paza'} 
             description={'description1 is very long'}
-            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
+            imgurl={kiramisa}
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
@@ -336,7 +336,7 @@ const Portfolio = ()=> {
           <ProjectCont 
             title={'titulo4'} 
             description={'description1 is very long and is for testinf diferent texts'}
-            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
+            imgurl={kiramisa}
             techs={['tech1', 'tech2', 'tech3', 'tech4', 'tech3', 'tech4']} 
           />
         </div>
@@ -344,7 +344,7 @@ const Portfolio = ()=> {
           <ProjectCont 
             title={'titulo2 en el numero 4'} 
             description={'description1 is very long'}
-            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
+            imgurl={kiramisa}
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
@@ -352,7 +352,7 @@ const Portfolio = ()=> {
           <ProjectCont 
             title={'titulo1'} 
             description={'description1 is very long'}
-            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
+            imgurl={kiramisa}
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
@@ -360,7 +360,7 @@ const Portfolio = ()=> {
           <ProjectCont 
             title={'titulo1'} 
             description={'description1 is very long'}
-            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
+            imgurl={kiramisa}
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
