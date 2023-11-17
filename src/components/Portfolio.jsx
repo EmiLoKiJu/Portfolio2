@@ -121,6 +121,7 @@ const Portfolio = ()=> {
   ProjectCont.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    imgurl: PropTypes.string.isRequired,
     techs: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
