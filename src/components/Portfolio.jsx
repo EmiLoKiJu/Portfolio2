@@ -1,6 +1,8 @@
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import PropTypes from 'prop-types';
+
+import { setPopup } from "../redux/popup/popupSlice";
 
 import GithubGrey from '@/assets/Github-grey.svg';
 import GithubBlack from '@/assets/Github-black.svg';
@@ -24,7 +26,8 @@ import DeathNoteImage from '@/assets/Death-note-L.jpg';
 // import kiramisa from '@/assets/Death-note-Kira-Misa.jpg';
 
 const Portfolio = ()=> {
-  const { message } = useSelector((store) => store.greetings);
+  const dispatch = useDispatch();
+  const popupstate = useSelector((store) => store.popup);
 
   const [githubSrc, setGithubSrc] = useState(GithubGrey);
   const [linkedInSrc, setLinkedInSrc] = useState(LinkedInGrey);
@@ -44,12 +47,7 @@ const Portfolio = ()=> {
     user_message: '',
   });
 
-  const [popup, setPopup] = useState(false);
   const [xMenu, setXMenu] = useState(xmenu);
-
-  const popupHandler = () => {
-    setPopup(!popup);
-  }
 
   const [errorMessage, setErrorMessage] = useState('');
   const [submited, setSubmited] = useState(false);
@@ -107,7 +105,11 @@ const Portfolio = ()=> {
             </li>
           ))}
         </ul>
-        <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => popupHandler()}>See project</button>
+        <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => dispatch(setPopup({ 
+          title: title,
+          description: description,
+          techs: techs
+        }))}>See project</button>
       </>
     );
   };
@@ -140,23 +142,28 @@ const Portfolio = ()=> {
 
   return(
     <div>
-      { popup &&
+      { popupstate.isopen &&
         (
           <div className='z-50 top-10 right-0 fixed h-full w-full bg-transparent backdrop-blur'>
             <div className="bg-white my-12 mx-12 h-3/4">
               <div>
                 <div>
-                  <h2>Title</h2>
+                  <h2>{popupstate.title}</h2>
+                  {popupstate.techs.map((tech, index) => (
+                    <li key={index} className="bg-black opacity-50 px-2 py-1 inline-block font-inter text-white hover:opacity-100 transition-opacity duration-200">
+                      {tech}
+                    </li>
+                  ))}
+                  <p>{popupstate.description}</p>
                   <img
                     className="w-11 p-3 object-contain"
                     src={xMenu}
                     alt="Github Logo"
                     onMouseEnter={() => setXMenu(xmenu) }
                     onMouseLeave={() => setXMenu(xmenuhover) }
-                    onClick={()=> popupHandler()}
+                    onClick={()=> dispatch(setPopup())}
                   ></img>
                 </div>
-
               </div>
             </div>
           </div>
@@ -173,7 +180,7 @@ const Portfolio = ()=> {
         >
         <div className="flex flex-col">
         <h1 className="font-crete text-5xl text-orange2 ">
-          {message} <br/>
+          Hi there~ <br/>
           I&apos;m Gabriel
         </h1>
         <h2 className="font-roboto text-xl text-white2 mt-2">I&apos;m a Software Developer</h2>
@@ -282,27 +289,27 @@ const Portfolio = ()=> {
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-Kira-Misa.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
             title={'titulo1'} 
+            description={'description1 is very long and I will have to make it long so the first element shows a lot of content'} 
+            techs={['tech1', 'tech2']} 
+          />
+        </div>
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
+          <ProjectCont 
+            title={'titulo3 y que paza'} 
             description={'description1 is very long'} 
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
-            title={'titulo1'} 
-            description={'description1 is very long'} 
-            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
+            title={'titulo4'} 
+            description={'description1 is very long and is for testinf diferent texts'} 
+            techs={['tech1', 'tech2', 'tech3', 'tech4', 'tech3', 'tech4']} 
           />
         </div>
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
-            title={'titulo1'} 
-            description={'description1 is very long'} 
-            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
-          />
-        </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
-          <ProjectCont 
-            title={'titulo1'} 
+            title={'titulo2 en el numero 4'} 
             description={'description1 is very long'} 
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
