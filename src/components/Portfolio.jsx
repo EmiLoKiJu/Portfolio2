@@ -1,6 +1,8 @@
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import PropTypes from 'prop-types';
+
+import { setPopup } from "../redux/popup/popupSlice";
 
 import GithubGrey from '@/assets/Github-grey.svg';
 import GithubBlack from '@/assets/Github-black.svg';
@@ -13,6 +15,12 @@ import MediumBlack from '@/assets/Medium-black.svg';
 import TwitterXGrey from '@/assets/Twitter-X-white.svg';
 import TwitterXBlack from '@/assets/Twitter-X-black.svg';
 
+import githubwhite from '@/assets/githubwhite.svg';
+import seelive from '@/assets/seelive.svg';
+
+import xmenu from '@/assets/x-button.svg'
+import xmenuhover from '@/assets/x-button2.svg'
+
 import Rec1 from '@/assets/Rectangle55.svg';
 import Rec2 from '@/assets/Rectangle56.svg';
 import Rec3 from '@/assets/Rectangle57.svg';
@@ -21,7 +29,8 @@ import DeathNoteImage from '@/assets/Death-note-L.jpg';
 // import kiramisa from '@/assets/Death-note-Kira-Misa.jpg';
 
 const Portfolio = ()=> {
-  const { message } = useSelector((store) => store.greetings);
+  const dispatch = useDispatch();
+  const popupstate = useSelector((store) => store.popup);
 
   const [githubSrc, setGithubSrc] = useState(GithubGrey);
   const [linkedInSrc, setLinkedInSrc] = useState(LinkedInGrey);
@@ -40,6 +49,8 @@ const Portfolio = ()=> {
     user_email: '',
     user_message: '',
   });
+
+  const [xMenu, setXMenu] = useState(xmenu);
 
   const [errorMessage, setErrorMessage] = useState('');
   const [submited, setSubmited] = useState(false);
@@ -84,7 +95,7 @@ const Portfolio = ()=> {
     }
   };
 
-  const ProjectCont = ({ title, description, techs }) => {
+  const ProjectCont = ({ title, description, imgurl, techs }) => {
     return (
       <>
         <div className="absolute inset-0 h-[338px] bg-gradient-to-t from-black to-transparent opacity-50 hover:opacity-0 transition-opacity duration-200"></div>
@@ -97,7 +108,12 @@ const Portfolio = ()=> {
             </li>
           ))}
         </ul>
-        <button className="text-white bg-orange2 font-inter font-bold p-3">See project</button>
+        <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => dispatch(setPopup({ 
+          title: title,
+          description: description,
+          imgurl: imgurl,
+          techs: techs
+        }))}>See project</button>
       </>
     );
   };
@@ -105,6 +121,7 @@ const Portfolio = ()=> {
   ProjectCont.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    imgurl: PropTypes.string.isRequired,
     techs: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
@@ -130,6 +147,53 @@ const Portfolio = ()=> {
 
   return(
     <div>
+      { popupstate.isopen &&
+        (
+          <div className='z-50 top-0 right-0 fixed w-full bg-transparent backdrop-blur'>
+            <div className="bg-white my-12 mx-4 h-3/4">
+              <div className="px-4 py-2">
+                <div className="flex flex-col">
+                  <div className="flex justify-between mb-8 md:mb-2">
+                    <h2 className="font-roboto font-bold text-3xl">{popupstate.title}</h2>
+                    <img
+                      className="w-11 p-3 object-contain"
+                      src={xMenu}
+                      alt="Github Logo"
+                      onMouseEnter={() => setXMenu(xmenu) }
+                      onMouseLeave={() => setXMenu(xmenuhover) }
+                      onClick={()=> dispatch(setPopup())}
+                    ></img>
+                  </div>
+                  
+                  <ul className="mb-4 w-full mx-auto flex flex-wrap justify-start gap-2">
+                  {popupstate.techs.map((tech, index) => (
+                    <li key={index} className="bg-white px-2 py-1 inline-block font-inter text-black border-2 border-[#979493]">
+                      {tech}
+                    </li>
+                  ))}
+                  </ul>
+                  <div className="flex flex-col md:flex-row">
+                    <img src={popupstate.imgurl} alt="coverimg" className="max-w-[400px] object-cover md:w-2/3 md:max-w-[800px] mb-3 md:mr-4"></img>
+                    <div className="">
+                      <p>{popupstate.description}</p>
+                      <div className="flex justify-between flex-wrap">
+                        <button className="flex pl-4 text-white bg-orange2 font-inter font-bold py-3 mb-4 mt-4 w-[130px]">
+                          See live
+                          <img src={seelive} alt="liveicon" className="ml-2"></img>
+                        </button>
+                        <button className="flex pl-4 text-white bg-orange2 font-inter font-bold p-3 mb-4 mt-4 w-[155px]">
+                          See source
+                          <img src={githubwhite} alt="liveicon" className="ml-4 my-auto"></img>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )
+      }
       <div id="top-section" 
         className="flex flex-col md:flex-row min-h-[700px] w-full pt-[165px] px-[8%] 
         bg-black bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] 
@@ -141,7 +205,7 @@ const Portfolio = ()=> {
         >
         <div className="flex flex-col">
         <h1 className="font-crete text-5xl text-orange2 ">
-          {message} <br/>
+          Hi there~ <br/>
           I&apos;m Gabriel
         </h1>
         <h2 className="font-roboto text-xl text-white2 mt-2">I&apos;m a Software Developer</h2>
@@ -231,7 +295,7 @@ const Portfolio = ()=> {
         <div className="flex flex-col md:flex-row mt-12">
           <img className="max-w-[680px] object-cover md:w-2/3" src={DeathNoteImage} alt="projectImg"></img>
           <div className="flex flex-col mx-6">
-            <h2 className="text-3xl font-crete">Title</h2>
+            <h2 className="text-3xl font-crete">Title of the main project</h2>
             <p className="text-base leading-6 font-inter">Description of the project that I have to make it long enough to explain all the features the project has</p>
             <ul className="flex flex-wrap justify-start gap-2 my-3">
               <li className="border px-2 py-1 inline-block font-inter">Tech 1</li>
@@ -241,7 +305,12 @@ const Portfolio = ()=> {
               <li className="border px-2 py-1 inline-block font-inter">Tech 2</li>
               <li className="border px-2 py-1 inline-block font-inter">Tech 3</li>
             </ul>
-            <button className="text-white bg-orange2 font-inter font-bold p-3">See project</button>
+            <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => dispatch(setPopup({ 
+              title: 'title of the main project',
+              description: 'Description of the project that I have to make it long enough to explain all the features the project has',
+              imgurl: DeathNoteImage,
+              techs: ['tech1', 'tech2']
+            }))}>See project</button>
           </div>
           
         </div>
@@ -250,42 +319,48 @@ const Portfolio = ()=> {
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-Kira-Misa.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
             title={'titulo1'} 
-            description={'description1 is very long'} 
+            description={'description1 is very long and I will have to make it long so the first element shows a lot of content description1 is very long and I will have to make it long so the first element shows a lot of content '} 
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
+            techs={['tech1', 'tech2']} 
+          />
+        </div>
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
+          <ProjectCont 
+            title={'titulo3 y que paza'} 
+            description={'description1 is very long'}
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
+            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
+          />
+        </div>
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
+          <ProjectCont 
+            title={'titulo4'} 
+            description={'description1 is very long and is for testinf diferent texts'}
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
+            techs={['tech1', 'tech2', 'tech3', 'tech4', 'tech3', 'tech4']} 
+          />
+        </div>
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
+          <ProjectCont 
+            title={'titulo2 en el numero 4'} 
+            description={'description1 is very long'}
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
             title={'titulo1'} 
-            description={'description1 is very long'} 
+            description={'description1 is very long'}
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
             title={'titulo1'} 
-            description={'description1 is very long'} 
-            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
-          />
-        </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
-          <ProjectCont 
-            title={'titulo1'} 
-            description={'description1 is very long'} 
-            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
-          />
-        </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
-          <ProjectCont 
-            title={'titulo1'} 
-            description={'description1 is very long'} 
-            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
-          />
-        </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
-          <ProjectCont 
-            title={'titulo1'} 
-            description={'description1 is very long'} 
+            description={'description1 is very long'}
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
