@@ -18,6 +18,7 @@ import Rec2 from '@/assets/Rectangle56.svg';
 import Rec3 from '@/assets/Rectangle57.svg';
 
 import DeathNoteImage from '@/assets/Death-note-L.jpg';
+// import kiramisa from '@/assets/Death-note-Kira-Misa.jpg';
 
 const Portfolio = ()=> {
   const { message } = useSelector((store) => store.greetings);
@@ -85,7 +86,7 @@ const Portfolio = ()=> {
 
   const ProjectCont = ({ bgurl, title, description, techs }) => {
     return (
-      <div className={`relative flex flex-col h-[386px] bg-[url('${bgurl}')] bg-no-repeat bg-center bg-cover`}>
+      <>
         <div className="absolute inset-0 h-[338px] bg-gradient-to-t from-black to-transparent opacity-50 hover:opacity-0 transition-opacity duration-200"></div>
         <h2 className="w-[90%] mx-auto text-3xl font-crete text-white mt-[72px]">{title}</h2>
         <p className="w-[90%] mx-auto text-base font-inter text-white leading-6 bg-transparent hover:bg-black opacity-70 transition-opacity duration-200 transition-colors duration-200">{description}</p>
@@ -97,7 +98,7 @@ const Portfolio = ()=> {
           ))}
         </ul>
         <button className="text-white bg-orange2 font-inter font-bold p-3">See project</button>
-      </div>
+      </>
     );
   };
 
@@ -247,42 +248,48 @@ const Portfolio = ()=> {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[85%] mx-auto">
-        <ProjectCont 
-          bgurl={'@/assets/Death-note-Kira-Misa.jpg'} 
-          title={'titulo1'} 
-          description={'description1 is very long'} 
-          techs={['tech1', 'tech2', 'tech3', 'tech4']} 
-        />
-        <ProjectCont 
-          bgurl={'@/assets/Death-note-Kira-Misa.jpg'} 
-          title={'titulo2'} 
-          description={'description 2 is very tiny but it works to make it look like fine'} 
-          techs={['tech1', 'tech2', 'tech3']} 
-        />
-        <ProjectCont 
-          bgurl={'@/assets/Death-note-L.jpg'} 
-          title={'titulo1'} 
-          description={'description1'} 
-          techs={['tech1']} 
-        />
-        <ProjectCont 
-          bgurl={'@/assets/Death-note-Kira-Misa.jpg'} 
-          title={'titulo2'} 
-          description={'description1'} 
-          techs={['tech1', 'tech2', 'tech3', 'tech4', 'tech5', 'tech6']} 
-        />
-        <ProjectCont 
-          bgurl={'@/assets/Death-note-Kira-Misa.jpg'} 
-          title={'titulo1'} 
-          description={'description1'} 
-          techs={['tech1', 'tech2', 'tech3', 'tech4']} 
-        />
-        <ProjectCont 
-          bgurl={'@/assets/Death-note-Kira-Misa.jpg'} 
-          title={'titulo2'} 
-          description={'description1'} 
-          techs={['tech1', 'tech2', 'tech3', 'tech4']} 
-        />
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-Kira-Misa.jpg')] bg-no-repeat bg-center bg-cover">
+          <ProjectCont 
+            title={'titulo1'} 
+            description={'description1 is very long'} 
+            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
+          />
+        </div>
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
+          <ProjectCont 
+            title={'titulo1'} 
+            description={'description1 is very long'} 
+            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
+          />
+        </div>
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
+          <ProjectCont 
+            title={'titulo1'} 
+            description={'description1 is very long'} 
+            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
+          />
+        </div>
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
+          <ProjectCont 
+            title={'titulo1'} 
+            description={'description1 is very long'} 
+            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
+          />
+        </div>
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
+          <ProjectCont 
+            title={'titulo1'} 
+            description={'description1 is very long'} 
+            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
+          />
+        </div>
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
+          <ProjectCont 
+            title={'titulo1'} 
+            description={'description1 is very long'} 
+            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
+          />
+        </div>
       </div>
       
       <div id="about-me-section" className="
