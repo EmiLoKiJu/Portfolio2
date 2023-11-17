@@ -92,7 +92,7 @@ const Portfolio = ()=> {
     }
   };
 
-  const ProjectCont = ({ title, description, techs }) => {
+  const ProjectCont = ({ title, description, imgurl, techs }) => {
     return (
       <>
         <div className="absolute inset-0 h-[338px] bg-gradient-to-t from-black to-transparent opacity-50 hover:opacity-0 transition-opacity duration-200"></div>
@@ -108,6 +108,7 @@ const Portfolio = ()=> {
         <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => dispatch(setPopup({ 
           title: title,
           description: description,
+          imgurl: imgurl,
           techs: techs
         }))}>See project</button>
       </>
@@ -144,26 +145,41 @@ const Portfolio = ()=> {
     <div>
       { popupstate.isopen &&
         (
-          <div className='z-50 top-10 right-0 fixed h-full w-full bg-transparent backdrop-blur'>
-            <div className="bg-white my-12 mx-12 h-3/4">
-              <div>
-                <div>
-                  <h2>{popupstate.title}</h2>
+          <div className='z-50 top-0 right-0 fixed h-full w-full bg-transparent backdrop-blur'>
+            <div className="bg-white my-12 mx-4 h-3/4">
+              <div className="mx-4">
+                <div className="flex flex-col">
+                  <div className="flex justify-between">
+                    <h2>{popupstate.title}</h2>
+                    <img
+                      className="w-11 p-3 object-contain"
+                      src={xMenu}
+                      alt="Github Logo"
+                      onMouseEnter={() => setXMenu(xmenu) }
+                      onMouseLeave={() => setXMenu(xmenuhover) }
+                      onClick={()=> dispatch(setPopup())}
+                    ></img>
+                  </div>
+                  
+                  <ul className="mt-auto mb-4 w-[90%] mx-auto flex flex-wrap justify-start gap-2">
                   {popupstate.techs.map((tech, index) => (
                     <li key={index} className="bg-black opacity-50 px-2 py-1 inline-block font-inter text-white hover:opacity-100 transition-opacity duration-200">
                       {tech}
                     </li>
                   ))}
-                  <p>{popupstate.description}</p>
-                  <img
-                    className="w-11 p-3 object-contain"
-                    src={xMenu}
-                    alt="Github Logo"
-                    onMouseEnter={() => setXMenu(xmenu) }
-                    onMouseLeave={() => setXMenu(xmenuhover) }
-                    onClick={()=> dispatch(setPopup())}
-                  ></img>
+                  </ul>
+                  <img src={popupstate.imgurl}></img>
+                  
                 </div>
+                <p>{popupstate.description}</p>
+                <div className="flex justify-between">
+                    <button className="text-white bg-orange2 font-inter font-bold py-3 mb-[70px] mt-8 w-[120px]">
+                      See live
+                    </button>
+                    <button className="text-white bg-orange2 font-inter font-bold p-3 mb-[70px] mt-8 w-[120px]">
+                      See code
+                    </button>
+                  </div>
               </div>
             </div>
           </div>
@@ -270,7 +286,7 @@ const Portfolio = ()=> {
         <div className="flex flex-col md:flex-row mt-12">
           <img className="max-w-[680px] object-cover md:w-2/3" src={DeathNoteImage} alt="projectImg"></img>
           <div className="flex flex-col mx-6">
-            <h2 className="text-3xl font-crete">Title</h2>
+            <h2 className="text-3xl font-crete">Title of the main project</h2>
             <p className="text-base leading-6 font-inter">Description of the project that I have to make it long enough to explain all the features the project has</p>
             <ul className="flex flex-wrap justify-start gap-2 my-3">
               <li className="border px-2 py-1 inline-block font-inter">Tech 1</li>
@@ -280,7 +296,12 @@ const Portfolio = ()=> {
               <li className="border px-2 py-1 inline-block font-inter">Tech 2</li>
               <li className="border px-2 py-1 inline-block font-inter">Tech 3</li>
             </ul>
-            <button className="text-white bg-orange2 font-inter font-bold p-3">See project</button>
+            <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => dispatch(setPopup({ 
+              title: 'title of the main project',
+              description: 'Description of the project that I have to make it long enough to explain all the features the project has',
+              imgurl: DeathNoteImage,
+              techs: ['tech1', 'tech2']
+            }))}>See project</button>
           </div>
           
         </div>
@@ -290,41 +311,47 @@ const Portfolio = ()=> {
           <ProjectCont 
             title={'titulo1'} 
             description={'description1 is very long and I will have to make it long so the first element shows a lot of content'} 
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
             techs={['tech1', 'tech2']} 
           />
         </div>
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
             title={'titulo3 y que paza'} 
-            description={'description1 is very long'} 
+            description={'description1 is very long'}
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
             title={'titulo4'} 
-            description={'description1 is very long and is for testinf diferent texts'} 
+            description={'description1 is very long and is for testinf diferent texts'}
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
             techs={['tech1', 'tech2', 'tech3', 'tech4', 'tech3', 'tech4']} 
           />
         </div>
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
             title={'titulo2 en el numero 4'} 
-            description={'description1 is very long'} 
+            description={'description1 is very long'}
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
             title={'titulo1'} 
-            description={'description1 is very long'} 
+            description={'description1 is very long'}
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
         <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
             title={'titulo1'} 
-            description={'description1 is very long'} 
+            description={'description1 is very long'}
+            imgurl={'./src/assets/Death-note-Kira-Misa.jpg'}
             techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
