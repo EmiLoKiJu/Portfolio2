@@ -13,6 +13,9 @@ import MediumBlack from '@/assets/Medium-black.svg';
 import TwitterXGrey from '@/assets/Twitter-X-white.svg';
 import TwitterXBlack from '@/assets/Twitter-X-black.svg';
 
+import xmenu from '@/assets/x-button.svg'
+import xmenuhover from '@/assets/x-button2.svg'
+
 import Rec1 from '@/assets/Rectangle55.svg';
 import Rec2 from '@/assets/Rectangle56.svg';
 import Rec3 from '@/assets/Rectangle57.svg';
@@ -40,6 +43,13 @@ const Portfolio = ()=> {
     user_email: '',
     user_message: '',
   });
+
+  const [popup, setPopup] = useState(false);
+  const [xMenu, setXMenu] = useState(xmenu);
+
+  const popupHandler = () => {
+    setPopup(!popup);
+  }
 
   const [errorMessage, setErrorMessage] = useState('');
   const [submited, setSubmited] = useState(false);
@@ -97,7 +107,7 @@ const Portfolio = ()=> {
             </li>
           ))}
         </ul>
-        <button className="text-white bg-orange2 font-inter font-bold p-3">See project</button>
+        <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => popupHandler()}>See project</button>
       </>
     );
   };
@@ -130,6 +140,28 @@ const Portfolio = ()=> {
 
   return(
     <div>
+      { popup &&
+        (
+          <div className='z-50 top-10 right-0 fixed h-full w-full bg-transparent backdrop-blur'>
+            <div className="bg-white my-12 mx-12 h-3/4">
+              <div>
+                <div>
+                  <h2>Title</h2>
+                  <img
+                    className="w-11 p-3 object-contain"
+                    src={xMenu}
+                    alt="Github Logo"
+                    onMouseEnter={() => setXMenu(xmenu) }
+                    onMouseLeave={() => setXMenu(xmenuhover) }
+                    onClick={()=> popupHandler()}
+                  ></img>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        )
+      }
       <div id="top-section" 
         className="flex flex-col md:flex-row min-h-[700px] w-full pt-[165px] px-[8%] 
         bg-black bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] 
