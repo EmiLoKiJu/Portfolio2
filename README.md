@@ -8,7 +8,6 @@
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Tutorial](#tutorial)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
@@ -24,7 +23,7 @@
 # 📖 [Portfolio2] <a name="about-project"></a>
 Portfolio2, is My porfolio built with TailwindCSS
 
-Link to the back-end repository [here](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+Link to the live demo [here](https://portfoliotailwindcss.onrender.com/)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -32,7 +31,8 @@ Link to the back-end repository [here](https://www.youtube.com/watch?v=dQw4w9WgX
 
 <details>
   <li><a href="https://redux.js.org/introduction/installation">React-redux</a></li>
-  <li><a href="https://axios-http.com/docs/intro">axios</a></li>
+  <li><a href="https://axios-http.com/docs/intro">Vite</a></li>
+  <li><a href="https://axios-http.com/docs/intro">Tailwind CSS</a></li>
 </details>
 
 <!-- Features -->
@@ -40,7 +40,8 @@ Link to the back-end repository [here](https://www.youtube.com/watch?v=dQw4w9WgX
 ### Key Features <a name="key-features"></a>
 
 - **React-redux**
-- **axios**
+- **Vite**
+- **Tailwind CSS**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -54,37 +55,6 @@ To get a local copy of this project and run it in your computer, follow these st
 In order to run this project you need:
 - node and yarn installed on your system.
 - npx version 7.1.0 or later.
-
-### Tutorial <a name="tutorial"></a>
-
-This project was build in windows 10, using vscode.
-
-To create this project run the following command:
-
-```
-$ npx create-react-app Portfolio2
-```
-
-For installing react-router-dom, react-redux, @reduxjs/toolkit and axios, run the following:
-
-```
-npm install react-router-dom
-npm install react-redux
-npm install @reduxjs/toolkit
-npm install axios
-```
-
-The file structure for react-redux is in the javascript folder, as it follows:
-```
-|-- src/
-|   |-- components/
-|   |-- redux/
-|   |   |-- store.js
-|   |-- App.js
-|   |-- index.js
-```
-
-Then, customize as you like to follow your requirements
 
 ### Setup
 
@@ -108,10 +78,10 @@ npm install
 
 To run the project, run the following command:
 ```
-npm start
+npm run dev
 ```
 
-Go to http://localhost:5000/ and see it working.
+Go to http://localhost:5173/ and see it working.
 
 ### Run tests
 
@@ -133,7 +103,7 @@ Not implemented tests
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Nothing so far
+- More projects
 
 <p align="right">(<a href="#Portfolio2">back to top</a>)</p>
 
