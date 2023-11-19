@@ -103,9 +103,7 @@ const Nav = ()=> {
             <MenuElement menuHandler={menuHandler} setHamb={setHamb} />
           </div>
         )
-        
       }
-      
     </div>
   );
 }

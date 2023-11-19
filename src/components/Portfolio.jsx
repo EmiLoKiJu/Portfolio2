@@ -28,6 +28,11 @@ import Rec3 from '@/assets/Rectangle57.svg';
 import DeathNoteImage from '@/assets/Death-note-L.jpg';
 import kiramisa from '@/assets/Death-note-Kira-Misa.jpg';
 
+import spotify from '@/assets/spotify.jpg';
+import parachutes from '@/assets/parachutes.jpg';
+import comedy from '@/assets/comedy.jpg';
+import coviddata from '@/assets/coviddata.jpg';
+
 const Portfolio = ()=> {
   const dispatch = useDispatch();
   const popupstate = useSelector((store) => store.popup);
@@ -95,15 +100,15 @@ const Portfolio = ()=> {
     }
   };
 
-  const ProjectCont = ({ title, description, imgurl, techs }) => {
+  const ProjectCont = ({ title, description, imgurl, techs, deploy, source }) => {
     return (
       <>
         <div className="absolute inset-0 h-[338px] bg-gradient-to-t from-black to-transparent opacity-50 hover:opacity-0 transition-opacity duration-200"></div>
-        <h2 className="w-[90%] mx-auto text-3xl font-crete text-white mt-[72px]">{title}</h2>
-        <p className="w-[90%] mx-auto text-base font-inter text-white leading-6 bg-transparent hover:bg-black opacity-70 transition-opacity duration-200 transition-colors duration-200">{description}</p>
+        <h2 className="w-[90%] mx-auto text-3xl font-crete text-black font-bold bg-white/50 mt-[72px] hover:bg-white opacity-70 transition-opacity duration-200 transition-colors duration-200">{title}</h2>
+        <p className="w-[90%] h-[140px] overflow-hidden mx-auto text-base font-inter text-white leading-6 bg-transparent hover:bg-black opacity-70 transition-opacity duration-200 transition-colors duration-200">{description}</p>
         <ul className="mt-auto mb-4 w-[90%] mx-auto flex flex-wrap justify-start gap-2">
           {techs.map((tech, index) => (
-            <li key={index} className="bg-black opacity-50 px-2 py-1 inline-block font-inter text-white hover:opacity-100 transition-opacity duration-200">
+            <li key={index} className="bg-black opacity-50 px-2 py-1 inline-block font-inter text-white">
               {tech}
             </li>
           ))}
@@ -112,6 +117,8 @@ const Portfolio = ()=> {
           title: title,
           description: description,
           imgurl: imgurl,
+          deploy: deploy,
+          source: source,
           techs: techs
         }))}>See project</button>
       </>
@@ -122,6 +129,8 @@ const Portfolio = ()=> {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     imgurl: PropTypes.string.isRequired,
+    deploy: PropTypes.string.isRequired,
+    source: PropTypes.string.isRequired,
     techs: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
@@ -149,43 +158,55 @@ const Portfolio = ()=> {
     <div>
       { popupstate.isopen &&
         (
-          <div className='z-50 top-0 right-0 fixed w-full bg-transparent backdrop-blur'>
-            <div className="bg-white my-12 mx-4 h-3/4">
-              <div className="px-4 py-2">
-                <div className="flex flex-col">
-                  <div className="flex justify-between mb-8 md:mb-2">
-                    <h2 className="font-roboto font-bold text-3xl">{popupstate.title}</h2>
-                    <img
-                      className="w-11 p-3 object-contain"
-                      src={xMenu}
-                      alt="Github Logo"
-                      onMouseEnter={() => setXMenu(xmenu) }
-                      onMouseLeave={() => setXMenu(xmenuhover) }
-                      onClick={()=> dispatch(setPopup())}
-                    ></img>
+          <div className='z-50 top-0 right-0 fixed w-full bg-transparent backdrop-blur h-full'>
+            <div className="bg-white flex flex-col my-12 mx-4 h-[85%] w-[95%]">
+              <div className="flex flex-col h-full w-full px-4 py-2">
+                <div className="flex justify-between mb-4 md:mb-2">
+                  <h2 className="font-roboto font-bold text-3xl">{popupstate.title}</h2>
+                  <img
+                    className="w-11 p-3 object-contain"
+                    src={xMenu}
+                    alt="Github Logo"
+                    onMouseEnter={() => setXMenu(xmenu) }
+                    onMouseLeave={() => setXMenu(xmenuhover) }
+                    onClick={()=> dispatch(setPopup())}
+                  ></img>
+                </div>
+                
+                <ul className="mb-4 w-full mx-auto flex flex-wrap justify-start gap-2">
+                {popupstate.techs.map((tech, index) => (
+                  <li key={index} className="bg-white px-2 py-1 inline-block font-inter text-black border-2 border-[#979493]">
+                    {tech}
+                  </li>
+                ))}
+                </ul>
+                <div className="flex flex-col md:flex-row h-[75%] overflow-y-auto md:h-[90%] md:w-full">
+                  <div className="overflow-y-auto mb-3 md:mr-4 w-full">
+                    <img src={popupstate.imgurl} alt="coverimg" className="w-full object-cover"></img>
                   </div>
-                  
-                  <ul className="mb-4 w-full mx-auto flex flex-wrap justify-start gap-2">
-                  {popupstate.techs.map((tech, index) => (
-                    <li key={index} className="bg-white px-2 py-1 inline-block font-inter text-black border-2 border-[#979493]">
-                      {tech}
-                    </li>
-                  ))}
-                  </ul>
-                  <div className="flex flex-col md:flex-row">
-                    <img src={popupstate.imgurl} alt="coverimg" className="max-w-[400px] object-cover md:w-2/3 md:max-w-[800px] mb-3 md:mr-4"></img>
-                    <div className="">
-                      <p>{popupstate.description}</p>
-                      <div className="flex justify-between flex-wrap">
+                  <div className="md:w-[70%]">
+                    <p className="max-h-[100px] overflow-y-auto md:max-h-full">{popupstate.description}</p>
+                    <div className="flex justify-between flex-wrap">
+                      <a 
+                        className="flex"
+                        href={popupstate.deploy}
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <button className="flex pl-4 text-white bg-orange2 font-inter font-bold py-3 mb-4 mt-4 w-[130px]">
                           See live
                           <img src={seelive} alt="liveicon" className="ml-2"></img>
                         </button>
+                      </a>
+                      <a 
+                        className="flex"
+                        href={popupstate.source}
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <button className="flex pl-4 text-white bg-orange2 font-inter font-bold p-3 mb-4 mt-4 w-[155px]">
                           See source
                           <img src={githubwhite} alt="liveicon" className="ml-4 my-auto"></img>
                         </button>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -293,75 +314,59 @@ const Portfolio = ()=> {
         </div>
         
         <div className="flex flex-col md:flex-row mt-12">
-          <img className="max-w-[680px] object-cover md:w-2/3" src={DeathNoteImage} alt="projectImg"></img>
+          <img className="max-w-[680px] object-cover md:w-2/3" src={coviddata} alt="projectImg"></img>
           <div className="flex flex-col mx-6">
-            <h2 className="text-3xl font-crete">Title of the main project</h2>
-            <p className="text-base leading-6 font-inter">Description of the project that I have to make it long enough to explain all the features the project has</p>
+            <h2 className="text-3xl font-crete">Covid Data</h2>
+            <p className="text-base leading-6 font-inter">This React-Redux mobile, makes calls to an API to retreive data from the server and puts it into the website in a beautiful UI.</p>
             <ul className="flex flex-wrap justify-start gap-2 my-3">
-              <li className="border px-2 py-1 inline-block font-inter">Tech 1</li>
-              <li className="border px-2 py-1 inline-block font-inter">Tech 2</li>
-              <li className="border px-2 py-1 inline-block font-inter">Tech 3</li>
-              <li className="border px-2 py-1 inline-block font-inter">Tech 1</li>
-              <li className="border px-2 py-1 inline-block font-inter">Tech 2</li>
-              <li className="border px-2 py-1 inline-block font-inter">Tech 3</li>
+              <li className="border px-2 py-1 inline-block font-inter">React</li>
+              <li className="border px-2 py-1 inline-block font-inter">Redux</li>
+              <li className="border px-2 py-1 inline-block font-inter">React-router</li>
+              <li className="border px-2 py-1 inline-block font-inter">Axios</li>
+              <li className="border px-2 py-1 inline-block font-inter">Chart.js</li>
+              <li className="border px-2 py-1 inline-block font-inter">Jest-dom</li>
             </ul>
             <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => dispatch(setPopup({ 
-              title: 'title of the main project',
-              description: 'Description of the project that I have to make it long enough to explain all the features the project has',
-              imgurl: DeathNoteImage,
-              techs: ['tech1', 'tech2']
+              title: 'Covid Data',
+              description: 'This React-Redux mobile, makes calls to an API to retreive data from the server and puts it into the website in a beautiful UI. It also has a configuration section where you can select the theme of the app, and finally it has a don\'t touch button. Click it under your own risk',
+              imgurl: coviddata,
+              deploy: 'https://coviddata.onrender.com/',
+              source: 'https://github.com/EmiLoKiJu/covid-data',
+              techs: ['React', 'Redux', 'React-router', 'Axios', 'Chart.js', 'Jest-dom']
             }))}>See project</button>
           </div>
           
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[85%] mx-auto">
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-Kira-Misa.jpg')] bg-no-repeat bg-center bg-cover">
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/parachutes.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
-            title={'titulo1'} 
-            description={'description1 is very long and I will have to make it long so the first element shows a lot of content description1 is very long and I will have to make it long so the first element shows a lot of content '} 
-            imgurl={kiramisa}
-            techs={['tech1', 'tech2']} 
+            title={'Parachute Full-stack'} 
+            description={'Parachute Full-stack, was a group project deployed by 2 people, where 2 repositories were created, one for the Front-end with React Vite and Redux, and the Back-end with Ruby on Rails. This is supposed to be an app to reserve parachutes, with a user authentication. It is full responsive with mobile and desktop versions, and has all the structure of a Full-stack project.'} 
+            imgurl={parachutes}
+            deploy={'https://parachute-front-end.onrender.com/'}
+            source={'https://github.com/EmiLoKiJu/parachute-front-end'}
+            techs={['React', 'Redux', 'Ruby on Rails', 'vite', 'JWT', 'Tailwind CSS']} 
           />
         </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/spotify.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
-            title={'titulo3 y que paza'} 
-            description={'description1 is very long'}
-            imgurl={kiramisa}
-            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
+            title={'Spotify-Artist'} 
+            description={'This App is designed to connect to the Spotify API, retreive some songs by doing a call with a keyword, and show the data from the songs. You can look for an artist that you might want to know before listening, and it shows all the top songs for the result based on spotify score'}
+            imgurl={spotify}
+            deploy={'https://artistoverall.onrender.com/'}
+            source={'https://github.com/EmiLoKiJu/Solo-capstone'}
+            techs={['Webpack', 'JavaScript', 'CSS', 'HTML']} 
           />
         </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
+        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/comedy.jpg')] bg-no-repeat bg-center bg-cover">
           <ProjectCont 
-            title={'titulo4'} 
-            description={'description1 is very long and is for testinf diferent texts'}
-            imgurl={kiramisa}
+            title={'Instagram celebrities'} 
+            description={'This solo project is a pure JavaScript project based on a topic I love, comedians ;) (These people are real) The project has a Mobile version and it\'s full responsive.'}
+            imgurl={comedy}
+            deploy={'https://emilokiju.github.io/Capstone/'}
+            source={'https://github.com/EmiLoKiJu/Capstone'}
             techs={['tech1', 'tech2', 'tech3', 'tech4', 'tech3', 'tech4']} 
-          />
-        </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
-          <ProjectCont 
-            title={'titulo2 en el numero 4'} 
-            description={'description1 is very long'}
-            imgurl={kiramisa}
-            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
-          />
-        </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
-          <ProjectCont 
-            title={'titulo1'} 
-            description={'description1 is very long'}
-            imgurl={kiramisa}
-            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
-          />
-        </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/Death-note-L.jpg')] bg-no-repeat bg-center bg-cover">
-          <ProjectCont 
-            title={'titulo1'} 
-            description={'description1 is very long'}
-            imgurl={kiramisa}
-            techs={['tech1', 'tech2', 'tech3', 'tech4']} 
           />
         </div>
       </div>
