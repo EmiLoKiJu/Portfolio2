@@ -317,7 +317,7 @@ const Portfolio = ()=> {
           <img className="max-w-[680px] object-cover md:w-2/3" src={coviddata} alt="projectImg"></img>
           <div className="flex flex-col mx-6">
             <h2 className="text-3xl font-crete">Covid Data</h2>
-            <p className="text-base leading-6 font-inter">This React-Redux mobile, makes calls to an API to retreive data from the server and puts it into the website in a beautiful UI.</p>
+            <p className="text-base leading-6 font-inter">This React-Redux mobile, makes calls to an API to retreive data from the server and puts it into the website in a beautiful UI. It also has a configuration section where you can select the theme of the app, and finally it has a don\'t touch button. Click it under your own risk.</p>
             <ul className="flex flex-wrap justify-start gap-2 my-3">
               <li className="border px-2 py-1 inline-block font-inter">React</li>
               <li className="border px-2 py-1 inline-block font-inter">Redux</li>
