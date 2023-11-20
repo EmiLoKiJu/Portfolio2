@@ -25,9 +25,6 @@ import Rec1 from '@/assets/Rectangle55.svg';
 import Rec2 from '@/assets/Rectangle56.svg';
 import Rec3 from '@/assets/Rectangle57.svg';
 
-import DeathNoteImage from '@/assets/Death-note-L.jpg';
-import kiramisa from '@/assets/Death-note-Kira-Misa.jpg';
-
 import spotify from '@/assets/spotify.jpg';
 import parachutes from '@/assets/parachutes.jpg';
 import comedy from '@/assets/comedy.jpg';
@@ -317,7 +314,7 @@ const Portfolio = ()=> {
           <img className="max-w-[680px] object-cover md:w-2/3" src={coviddata} alt="projectImg"></img>
           <div className="flex flex-col md:mx-6">
             <h2 className="text-3xl font-crete">Covid Data</h2>
-            <p className="text-base leading-6 font-inter">This React-Redux mobile, makes calls to an API to retreive data from the server and puts it into the website in a beautiful UI. It also has a configuration section where you can select the theme of the app, and finally it has a don\'t touch button. Click it under your own risk.</p>
+            <p className="text-base leading-6 font-inter">This React-Redux mobile, makes calls to an API to retreive data from the server and puts it into the website in a beautiful UI. It also has a configuration section where you can select the theme of the app, and finally it has a don&apos;t touch button. Click it under your own risk.</p>
             <ul className="flex flex-wrap justify-start gap-2 my-3">
               <li className="border px-2 py-1 inline-block font-inter">React</li>
               <li className="border px-2 py-1 inline-block font-inter">Redux</li>
