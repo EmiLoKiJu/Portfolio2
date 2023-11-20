@@ -5,12 +5,12 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
+  - [ Live demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -21,9 +21,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [Portfolio2] <a name="about-project"></a>
-Portfolio2, is My porfolio built with TailwindCSS
-
-Link to the live demo [here](https://portfoliotailwindcss.onrender.com/)
+Portfolio2, is My porfolio built with Vite, React-Redux and TailwindCSS
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -44,6 +42,10 @@ Link to the live demo [here](https://portfoliotailwindcss.onrender.com/)
 - **Tailwind CSS**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Live demo <a name="live-demo"></a>
+
+Link to the live demo [here](https://portfoliotailwindcss.onrender.com/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 <!-- https://github.com/EmiLoKiJu/Portfolio2 -->
@@ -82,10 +84,6 @@ npm run dev
 ```
 
 Go to http://localhost:5173/ and see it working.
-
-### Run tests
-
-Not implemented tests
 
 <p align="right">(<a href="#Portfolio2">back to top</a>)</p>
 
