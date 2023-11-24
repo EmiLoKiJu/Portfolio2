@@ -376,7 +376,7 @@ const Portfolio = ()=> {
         <h1 className="font-crete text-5xl text-orange2 ">
           About me
         </h1>
-        <p className="obs transition-colors ease-in-out delay-100 duration-[1000ms] text-base leading-6 font-inter text-white my-6 max-w-[300px] ">I'm a person who discovered his passion to program when I was studing electronic engineering between 2014 and 2018, and after I left, there was a gap where I tried learning how to program videogames, and after that I joined the program to become a Full-Stack Software Developer. <br/> The best atributes you will find in myself are responsability, logical-thinking, problem-solving skills, and adaptability to learn new technologies.</p>
+        <p className="obs transition-colors ease-in-out delay-100 duration-[1000ms] text-base leading-6 font-inter text-white my-6 max-w-[300px] ">I&apos;m a person who discovered his passion to program when I was studing electronic engineering between 2014 and 2018, and after I left, there was a gap where I tried learning how to program videogames, and after that I joined the program to become a Full-Stack Software Developer. <br/> The best atributes you will find in myself are responsability, logical-thinking, problem-solving skills, and adaptability to learn new technologies.</p>
         <button className="text-white bg-orange2 font-inter font-bold p-3 mb-[220px] mt-auto w-[180px]">Get my resume</button>
         <div className="border-t border-white-400 mb-16"></div>
       </div>
