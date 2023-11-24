@@ -6,6 +6,7 @@ const App = () => {
     const script = document.createElement("script")
     script.src = "/src/scripts/observer.js"
     script.async = true
+    script.type = 'module'
     document.body.appendChild(script)
   }, [])
 
