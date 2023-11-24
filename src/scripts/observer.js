@@ -1,4 +1,4 @@
-const observer = new IntersectionObserver((entries) => {
+const observer1 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('text-white');
@@ -10,7 +10,7 @@ const observer = new IntersectionObserver((entries) => {
   })
 })
 const hiddenElements = document.querySelectorAll('.obs');
-hiddenElements.forEach((element) => observer.observe(element));
+hiddenElements.forEach((element) => observer1.observe(element));
 
 const observer2 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
