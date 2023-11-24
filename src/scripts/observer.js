@@ -2,13 +2,14 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
     if (entry.isIntersecting) {
-      entry.target.classList.remove('text-black');
       entry.target.classList.add('text-white');
+      entry.target.classList.remove('text-transparent');
+
 
     } else {
-
-      entry.target.classList.add('text-black');
+      entry.target.classList.add('text-transparent');
       entry.target.classList.remove('text-white');
+
     }
   })
 })

@@ -226,8 +226,8 @@ const Portfolio = ()=> {
           Hi there~ <br/>
           I&apos;m Gabriel
         </h1>
-        <h2 className="obs font-roboto text-xl text-white2 mt-2">I&apos;m a Software Developer</h2>
-        <h3 className="obs font-poppins text-base text-white mt-2 leading-6 max-w-[320px] md:pb-[505px]">I can help you building a feature, product or website, with my programming skills and my problem solving abilities.</h3>
+        <h2 className="obs transition-colors ease-in-out delay-300 duration-500 font-roboto text-xl text-white2 mt-2">I&apos;m a Software Developer</h2>
+        <h3 className="obs transition-colors ease-in-out delay-300 duration-500 font-poppins text-base text-white mt-2 leading-6 max-w-[320px] md:pb-[505px]">I can help you building a feature, product or website, with my programming skills and my problem solving abilities.</h3>
         </div>
         <div className="flex pt-4 pb-[165px] order-last md:order-first md:flex-col md:ml-[-6%] md:mr-[4%] md:mt-4">
           <a
@@ -378,7 +378,7 @@ const Portfolio = ()=> {
         <h1 className="font-crete text-5xl text-orange2 ">
           About me
         </h1>
-        <p className="obs text-base leading-6 font-inter text-white my-6 max-w-[300px] transition-colors ease-in-out delay-300">I'm a person who discovered his passion to program when I was studing electronic engineering between 2014 and 2018, and after I left, there was a gap where I tried learning how to program videogames, and after that I joined the program to become a Full-Stack Software Developer. <br/> The best atributes you will find in myself are responsability, logical-thinking, problem-solving skills, and adaptability to learn new technologies.</p>
+        <p className="obs text-base leading-6 font-inter text-white my-6 max-w-[300px] transition-colors ease-in-out delay-300 duration-500">I'm a person who discovered his passion to program when I was studing electronic engineering between 2014 and 2018, and after I left, there was a gap where I tried learning how to program videogames, and after that I joined the program to become a Full-Stack Software Developer. <br/> The best atributes you will find in myself are responsability, logical-thinking, problem-solving skills, and adaptability to learn new technologies.</p>
         <button className="text-white bg-orange2 font-inter font-bold p-3 mb-[160px] mt-auto w-[180px]">Get my resume</button>
         <div className="border-t border-white-400 mb-16"></div>
       </div>
