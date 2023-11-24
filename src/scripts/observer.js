@@ -1,15 +1,11 @@
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add('text-white');
       entry.target.classList.remove('text-transparent');
-
-
     } else {
       entry.target.classList.add('text-transparent');
       entry.target.classList.remove('text-white');
-
     }
   })
 })
@@ -18,16 +14,12 @@ hiddenElements.forEach((element) => observer.observe(element));
 
 const observer2 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add('text-black');
       entry.target.classList.remove('text-transparent');
-
-
     } else {
       entry.target.classList.add('text-transparent');
       entry.target.classList.remove('text-black');
-
     }
   })
 })

@@ -89,8 +89,6 @@ const Portfolio = ()=> {
       if (!response.ok) {
         throw new Error('Form submission failed');
       }
-
-      console.log('Form submitted:', formData);
       setSubmited(true);
     } catch (error) {
       console.error('Error submitting form:', error);
