@@ -237,7 +237,7 @@ const Portfolio = ()=> {
             rel="noopener noreferrer"
           >
             <img
-              className="w-7 p-[5px] object-contain md:my-2"
+              className="animate-wiggle w-7 p-[5px] object-contain md:my-2"
               src={githubSrc}
               alt="Github Logo"
               onMouseEnter={() => setGithubSrc(GithubBlack)}
@@ -251,7 +251,7 @@ const Portfolio = ()=> {
             rel="noopener noreferrer"
           >
             <img
-              className="w-7 p-1 object-contain md:my-2"
+              className="animate-wiggle w-7 p-1 object-contain md:my-2"
               src={linkedInSrc}
               alt="LinkedIn Logo"
               onMouseEnter={() => setLinkedInSrc(LinkedInBlack)}
@@ -445,7 +445,7 @@ const Portfolio = ()=> {
           rel="noopener noreferrer"
         >
           <img
-            className="w-7 p-[5px] object-contain m-2"
+            className="animate-wiggle w-7 p-[5px] object-contain m-2"
             src={githubSrc2}
             alt="Github Logo"
             onMouseEnter={() => setGithubSrc2(GithubGrey)}
@@ -459,7 +459,7 @@ const Portfolio = ()=> {
           rel="noopener noreferrer"
         >
           <img
-            className="w-7 p-1 object-contain m-2"
+            className="animate-wiggle w-7 p-1 object-contain m-2"
             src={linkedInSrc2}
             alt="LinkedIn Logo"
             onMouseEnter={() => setLinkedInSrc2(LinkedInGrey)}

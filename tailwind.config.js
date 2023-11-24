@@ -27,6 +27,9 @@ export default {
         'black2': '#1c1a19',
         'white2': '#fff5e1',
       },
+      animation: {
+        wiggle: 'wiggle 5s ease-out infinite',
+      },
     },
   },
   plugins: [],
