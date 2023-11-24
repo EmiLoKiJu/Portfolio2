@@ -136,10 +136,10 @@ const Portfolio = ()=> {
       <div className="flex flex-col items-center">
         <div className="flex justify-center pr-[8%] my-2">
           <img src={figure} alt="O0" className="object-contain w-5 mx-3"></img>
-          <h2 className="font-bold text-white font-roboto text-3xl">{category}</h2>
+          <h2 className="obs transition-colors ease-in-out delay-100 duration-[1000ms] font-bold text-white font-roboto text-3xl">{category}</h2>
         </div>
         {atributes.map((atribute, index) => (
-          <h3 key={index} className="font-inter text-[22px] text-white my-1 leading-9">{atribute}</h3>
+          <h3 key={index} className="obs transition-colors ease-in-out delay-100 duration-[1000ms] font-inter text-[22px] text-white my-1 leading-9">{atribute}</h3>
         ))}
       </div>
     );
@@ -226,8 +226,8 @@ const Portfolio = ()=> {
           Hi there~ <br/>
           I&apos;m Gabriel
         </h1>
-        <h2 className="obs transition-colors ease-in-out delay-300 duration-500 font-roboto text-xl text-white2 mt-2">I&apos;m a Software Developer</h2>
-        <h3 className="obs transition-colors ease-in-out delay-300 duration-500 font-poppins text-base text-white mt-2 leading-6 max-w-[320px] md:pb-[505px]">I can help you building a feature, product or website, with my programming skills and my problem solving abilities.</h3>
+        <h2 className="obs transition-colors ease-in-out delay-100 duration-[1000ms] font-roboto text-xl text-white2 mt-2">I&apos;m a Software Developer</h2>
+        <h3 className="obs transition-colors ease-in-out delay-100 duration-[1000ms] font-poppins text-base text-white mt-2 leading-6 max-w-[320px] md:pb-[505px]">I can help you building a feature, product or website, with my programming skills and my problem solving abilities.</h3>
         </div>
         <div className="flex pt-4 pb-[165px] order-last md:order-first md:flex-col md:ml-[-6%] md:mr-[4%] md:mt-4">
           <a
@@ -304,7 +304,7 @@ const Portfolio = ()=> {
       </div>
       <div id="projects-section" className="w-[85%] mx-auto pt-[80px] mb-6">
         <div className="flex flex-col md:flex-row md:w-full md:justify-between">
-          <h2 className="text-center font-crete text-4xl">
+          <h2 className="obs2 transition-colors ease-in-out delay-100 duration-[1000ms] text-center font-crete text-4xl">
             My recent works
           </h2>
           <div className="border-t-2 border-black-400 md:flex-1 md:ml-6 md:my-auto"></div>
@@ -313,8 +313,8 @@ const Portfolio = ()=> {
         <div className="flex flex-col md:flex-row mt-12">
           <img className="max-w-[680px] object-cover md:w-2/3" src={coviddata} alt="projectImg"></img>
           <div className="flex flex-col md:mx-6">
-            <h2 className="text-3xl font-crete">Covid Data</h2>
-            <p className="text-base leading-6 font-inter">This React-Redux mobile, makes calls to an API to retreive data from the server and puts it into the website in a beautiful UI. It also has a configuration section where you can select the theme of the app, and finally it has a don&apos;t touch button. Click it under your own risk.</p>
+            <h2 className="obs2 transition-colors ease-in-out delay-100 duration-[1000ms] text-3xl font-crete">Covid Data</h2>
+            <p className="obs2 transition-colors ease-in-out delay-100 duration-[1000ms] text-base leading-6 font-inter">This React-Redux mobile, makes calls to an API to retreive data from the server and puts it into the website in a beautiful UI. It also has a configuration section where you can select the theme of the app, and finally it has a don&apos;t touch button. Click it under your own risk.</p>
             <ul className="flex flex-wrap justify-start gap-2 my-3">
               <li className="border px-2 py-1 inline-block font-inter">React</li>
               <li className="border px-2 py-1 inline-block font-inter">Redux</li>
@@ -369,17 +369,17 @@ const Portfolio = ()=> {
       </div>
       
       <div id="about-me-section" className="
-        flex flex-col w-full bg-black2 mt-[120px] pt-[120px] px-[8%] h-[720px] 
+        flex flex-col w-full bg-black2 mt-[120px] pt-[60px] px-[8%] 
         bg-no-repeat bg-[url(@/assets/OrangeFalcon.png)] 
-        bg-[right_-10px_top_470px] bg-[length:200px_200px]
+        bg-[right_-10px_top_530px] bg-[length:200px_200px]
         sm:bg-[length:300px_300px] sm:bg-[right_1%_top_370px]
         md:bg-[length:400px_400px] md:bg-[right_1%_top_270px]
         lg:bg-[length:700px_700px] lg:bg-[right_-6%_top_0px]">
         <h1 className="font-crete text-5xl text-orange2 ">
           About me
         </h1>
-        <p className="obs text-base leading-6 font-inter text-white my-6 max-w-[300px] transition-colors ease-in-out delay-300 duration-500">I'm a person who discovered his passion to program when I was studing electronic engineering between 2014 and 2018, and after I left, there was a gap where I tried learning how to program videogames, and after that I joined the program to become a Full-Stack Software Developer. <br/> The best atributes you will find in myself are responsability, logical-thinking, problem-solving skills, and adaptability to learn new technologies.</p>
-        <button className="text-white bg-orange2 font-inter font-bold p-3 mb-[160px] mt-auto w-[180px]">Get my resume</button>
+        <p className="obs transition-colors ease-in-out delay-100 duration-[1000ms] text-base leading-6 font-inter text-white my-6 max-w-[300px] ">I'm a person who discovered his passion to program when I was studing electronic engineering between 2014 and 2018, and after I left, there was a gap where I tried learning how to program videogames, and after that I joined the program to become a Full-Stack Software Developer. <br/> The best atributes you will find in myself are responsability, logical-thinking, problem-solving skills, and adaptability to learn new technologies.</p>
+        <button className="text-white bg-orange2 font-inter font-bold p-3 mb-[220px] mt-auto w-[180px]">Get my resume</button>
         <div className="border-t border-white-400 mb-16"></div>
       </div>
       <div className="flex flex-col w-full bg-black2 pt-[60px] px-[8%] h-[920px] lg:h-[520px]">
@@ -391,10 +391,10 @@ const Portfolio = ()=> {
       </div>
       <div className="px-[8%] pt-16 md:pt-24">
         <div className="flex flex-col md:flex-row">
-          <h2 className="max-w-[600px] text-center font-inter text-3xl font-bold"> I&apos;m always interested in hearing about new projects. If you&apos;d like to talk about new project oportunities, please feel free to reach out so we can connect</h2>
+          <h2 className="obs2 transition-colors ease-in-out delay-100 duration-[1000ms] max-w-[600px] text-center font-inter text-3xl font-bold"> I&apos;m always interested in hearing about new projects. If you&apos;d like to talk about new project oportunities, please feel free to reach out so we can connect</h2>
           {submited ? 
           (
-            <div className="roboto text-2xl text-center my-8">Thank you for your time!</div>
+            <div className="obs2 transition-colors ease-in-out delay-100 duration-[1000ms] roboto text-2xl text-center my-8">Thank you for your time!</div>
           ) 
           : 
           (
