@@ -226,8 +226,8 @@ const Portfolio = ()=> {
           Hi there~ <br/>
           I&apos;m Gabriel
         </h1>
-        <h2 className="font-roboto text-xl text-white2 mt-2">I&apos;m a Software Developer</h2>
-        <h3 className="font-poppins text-base text-white mt-2 leading-6 max-w-[320px] md:pb-[505px]">I can help you building a feature, product or website, with my programming skills and my problem solving abilities.</h3>
+        <h2 className="obs font-roboto text-xl text-white2 mt-2">I&apos;m a Software Developer</h2>
+        <h3 className="obs font-poppins text-base text-white mt-2 leading-6 max-w-[320px] md:pb-[505px]">I can help you building a feature, product or website, with my programming skills and my problem solving abilities.</h3>
         </div>
         <div className="flex pt-4 pb-[165px] order-last md:order-first md:flex-col md:ml-[-6%] md:mr-[4%] md:mt-4">
           <a
@@ -378,8 +378,8 @@ const Portfolio = ()=> {
         <h1 className="font-crete text-5xl text-orange2 ">
           About me
         </h1>
-        <p className="text-base leading-6 font-inter text-white my-6 max-w-[300px]">This is the about me description. It should say something interesting about me to make recruiters more interested. I need to make sure it is not so descriptive but with the escencial atributes of myself.</p>
-        <button className="text-white bg-orange2 font-inter font-bold p-3 mb-[260px] mt-auto w-[180px]">Get my resume</button>
+        <p className="obs text-base leading-6 font-inter text-white my-6 max-w-[300px] transition-colors ease-in-out delay-300">I'm a person who discovered his passion to program when I was studing electronic engineering between 2014 and 2018, and after I left, there was a gap where I tried learning how to program videogames, and after that I joined the program to become a Full-Stack Software Developer. <br/> The best atributes you will find in myself are responsability, logical-thinking, problem-solving skills, and adaptability to learn new technologies.</p>
+        <button className="text-white bg-orange2 font-inter font-bold p-3 mb-[160px] mt-auto w-[180px]">Get my resume</button>
         <div className="border-t border-white-400 mb-16"></div>
       </div>
       <div className="flex flex-col w-full bg-black2 pt-[60px] px-[8%] h-[920px] lg:h-[520px]">
