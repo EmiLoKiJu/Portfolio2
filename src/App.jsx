@@ -1,10 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import Router from "@/routing/Router"
+import { useEffect } from "react"
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  useEffect(() => {
+    import('./scripts/observer.js')
+  }, [])
 
-  return <h1 className="text-5xl text-red-500 font-bold underline text-center">Hello world!</h1>
+  return (
+      <Router />
+  );
 }
 
-export default App
+export default App;
