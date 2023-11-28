@@ -7,7 +7,7 @@ const App = () => {
   }, [])
 
   return (
-      <Router />
+    <Router />
   );
 }
 
