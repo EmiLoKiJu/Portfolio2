@@ -321,7 +321,7 @@ const Portfolio = ()=> {
               <li className="border px-2 py-1 inline-block font-inter">Chart.js</li>
               <li className="border px-2 py-1 inline-block font-inter">Jest-dom</li>
             </ul>
-            <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => dispatch(setPopup({ 
+            <button className="text-white bg-orange2 font-inter font-bold p-3 transition-bg hover:bg-orange-700 duration-200" onClick={() => dispatch(setPopup({ 
               title: 'Covid Data',
               description: 'This React-Redux mobile, makes calls to an API to retreive data from the server and puts it into the website in a beautiful UI. It also has a configuration section where you can select the theme of the app, and finally it has a don\'t touch button. Click it under your own risk',
               imgurl: coviddata,
