@@ -98,17 +98,17 @@ const Portfolio = ()=> {
   const ProjectCont = ({ title, description, imgurl, techs, deploy, source }) => {
     return (
       <>
-        <div className="absolute inset-0 h-[338px] bg-gradient-to-t from-black to-transparent opacity-50 hover:opacity-0 transition-opacity duration-200"></div>
-        <h2 className="w-[90%] mx-auto text-3xl font-crete text-black font-bold bg-white/50 mt-[72px] hover:bg-white opacity-70 transition-opacity duration-200 transition-colors duration-200">{title}</h2>
-        <p className="w-[90%] h-[140px] overflow-hidden mx-auto text-base font-inter text-white leading-6 bg-transparent hover:bg-black opacity-70 transition-opacity duration-200 transition-colors duration-200">{description}</p>
-        <ul className="mt-auto mb-4 w-[90%] mx-auto flex flex-wrap justify-start gap-2">
+        <div className="absolute inset-0 h-[338px] bg-gradient-to-t from-black from-10% via-black via-30% to-90% opacity-50 group-hover:opacity-0 transition-opacity duration-500"></div>
+        <h2 className="z-10 relative w-[90%] mx-auto text-3xl font-crete font-bold mt-[72px] group-hover:hidden transition-all duration-500">{title}</h2>
+        <p className="z-10 relative w-[90%] h-[140px] overflow-hidden mx-auto text-base font-inter text-white leading-6 bg-transparent group-hover:hidden transition-all duration-500">{description}</p>
+        <ul className="z-10 relative mt-auto mb-4 w-[90%] mx-auto flex flex-wrap justify-start gap-2 group-hover:hidden transition-all duration-500">
           {techs.map((tech, index) => (
             <li key={index} className="bg-black opacity-50 px-2 py-1 inline-block font-inter text-white">
               {tech}
             </li>
           ))}
         </ul>
-        <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => dispatch(setPopup({ 
+        <button className="text-white bg-orange2 font-inter font-bold p-3 transition-bg hover:bg-orange-700 duration-200" onClick={() => dispatch(setPopup({ 
           title: title,
           description: description,
           imgurl: imgurl,
@@ -334,7 +334,7 @@ const Portfolio = ()=> {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[85%] mx-auto">
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/parachutes.jpg')] bg-no-repeat bg-center bg-cover">
+        <div className="text-white relative flex flex-col h-[386px] bg-[url('@/assets/parachutes.jpg')] bg-no-repeat bg-center bg-cover group hover:flex-col-reverse">
           <ProjectCont 
             title={'Parachute Full-stack'} 
             description={'Parachute Full-stack, was a group project deployed by 2 people, where 2 repositories were created, one for the Front-end with React Vite and Redux, and the Back-end with Ruby on Rails. This is supposed to be an app to reserve parachutes, with a user authentication. It is full responsive with mobile and desktop versions, and has all the structure of a Full-stack project.'} 
@@ -344,7 +344,7 @@ const Portfolio = ()=> {
             techs={['React', 'Redux', 'Ruby on Rails', 'vite', 'JWT', 'Tailwind CSS']} 
           />
         </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/spotify.jpg')] bg-no-repeat bg-center bg-cover">
+        <div className="text-white relative flex flex-col h-[386px] bg-[url('@/assets/spotify.jpg')] bg-no-repeat bg-center bg-cover group hover:flex-col-reverse">
           <ProjectCont 
             title={'Spotify-Artist'} 
             description={'This App is designed to connect to the Spotify API, retreive some songs by doing a call with a keyword, and show the data from the songs. You can look for an artist that you might want to know before listening, and it shows all the top songs for the result based on spotify score'}
@@ -354,7 +354,7 @@ const Portfolio = ()=> {
             techs={['Webpack', 'JavaScript', 'CSS', 'HTML']} 
           />
         </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/comedy.jpg')] bg-no-repeat bg-center bg-cover">
+        <div className="text-white relative flex flex-col h-[386px] bg-[url('@/assets/comedy.jpg')] bg-no-repeat bg-center bg-cover group hover:flex-col-reverse">
           <ProjectCont 
             title={'Instagram celebrities'} 
             description={'This solo project is a pure JavaScript project based on a topic I love, comedians ;) (These people are real) The project has a Mobile version and it\'s full responsive.'}
