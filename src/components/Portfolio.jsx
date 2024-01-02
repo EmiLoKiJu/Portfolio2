@@ -377,7 +377,11 @@ const Portfolio = ()=> {
           About me
         </h1>
         <p className="obs transition-colors ease-in-out delay-100 duration-[1000ms] text-base leading-6 font-inter text-white my-6 max-w-[300px] ">I&apos;m a person who discovered his passion to program when I was studing electronic engineering between 2014 and 2018, and after I left, there was a gap where I tried learning how to program videogames, and after that I joined the program to become a Full-Stack Software Developer. <br/> The best atributes you will find in myself are responsability, logical-thinking, problem-solving skills, and adaptability to learn new technologies.</p>
-        <a className="flex mb-[220px] mt-auto" href="https://docs.google.com/document/d/1FqKTVkPu6RHxVKqzN7IfH15wnpKxpsko43HQjIANwGM/edit?usp=sharing" target="_blank"><button className="text-white bg-orange2 font-inter font-bold p-3 w-[180px]">Get my resume</button></a>
+        <a className="flex mb-[220px] mt-auto" href="https://docs.google.com/document/d/1FqKTVkPu6RHxVKqzN7IfH15wnpKxpsko43HQjIANwGM/edit?usp=sharing" target="_blank">
+          <button className="text-white bg-orange2 font-inter font-bold p-3 w-[180px] transition-bg hover:bg-orange-700 duration-200">
+            Get my resume
+          </button>
+        </a>
         <div className="border-t border-white-400 mb-16"></div>
       </div>
       <div className="flex flex-col w-full bg-black2 pt-[60px] px-[8%] h-[920px] lg:h-[520px]">
@@ -427,7 +431,7 @@ const Portfolio = ()=> {
                   onChange={handleChange}
                 ></textarea>
                 {errorMessage && <p className="text-red-500 font-inter pl-4">{errorMessage}</p>}
-                <button className="mx-auto text-white bg-orange2 font-inter font-bold p-3 mb-[70px] mt-8 w-[160px] md:mx-0" type="submit">
+                <button className="mx-auto text-white bg-orange2 font-inter font-bold p-3 mb-[70px] mt-8 w-[160px] md:mx-0 transition-bg hover:bg-orange-700 duration-200" type="submit">
                   Get in touch
                 </button>
               </form>
