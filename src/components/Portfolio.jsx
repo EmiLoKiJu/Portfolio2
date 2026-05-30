@@ -98,17 +98,17 @@ const Portfolio = ()=> {
   const ProjectCont = ({ title, description, imgurl, techs, deploy, source }) => {
     return (
       <>
-        <div className="absolute inset-0 h-[338px] bg-gradient-to-t from-black to-transparent opacity-50 hover:opacity-0 transition-opacity duration-200"></div>
-        <h2 className="w-[90%] mx-auto text-3xl font-crete text-black font-bold bg-white/50 mt-[72px] hover:bg-white opacity-70 transition-opacity duration-200 transition-colors duration-200">{title}</h2>
-        <p className="w-[90%] h-[140px] overflow-hidden mx-auto text-base font-inter text-white leading-6 bg-transparent hover:bg-black opacity-70 transition-opacity duration-200 transition-colors duration-200">{description}</p>
-        <ul className="mt-auto mb-4 w-[90%] mx-auto flex flex-wrap justify-start gap-2">
+        <div className="absolute inset-0 h-[338px] bg-gradient-to-t from-black from-10% via-black via-30% to-90% opacity-50 group-hover:opacity-0 transition-opacity duration-500"></div>
+        <h2 className="z-10 relative w-[90%] mx-auto text-3xl font-crete font-bold mt-[72px] group-hover:hidden transition-all duration-500">{title}</h2>
+        <p className="z-10 relative w-[90%] h-[140px] overflow-hidden mx-auto text-base font-inter text-white leading-6 bg-transparent group-hover:hidden transition-all duration-500">{description}</p>
+        <ul className="z-10 relative mt-auto mb-4 w-[90%] mx-auto flex flex-wrap justify-start gap-2 group-hover:hidden transition-all duration-500">
           {techs.map((tech, index) => (
             <li key={index} className="bg-black opacity-50 px-2 py-1 inline-block font-inter text-white">
               {tech}
             </li>
           ))}
         </ul>
-        <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => dispatch(setPopup({ 
+        <button className="text-white bg-orange2 font-inter font-bold p-3 transition-bg hover:bg-orange-700 duration-200" onClick={() => dispatch(setPopup({ 
           title: title,
           description: description,
           imgurl: imgurl,
@@ -258,7 +258,7 @@ const Portfolio = ()=> {
           </a>
           <a
             className="flex"
-            href="https://wellfound.com/u/gabriel-rozas"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -272,7 +272,7 @@ const Portfolio = ()=> {
           </a>
           <a
             className="flex"
-            href="https://twitter.com/GabrielRozas12"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -286,7 +286,7 @@ const Portfolio = ()=> {
           </a>
           <a
             className="flex"
-            href="https://medium.com/@gabrielrozas1996"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -321,7 +321,7 @@ const Portfolio = ()=> {
               <li className="border px-2 py-1 inline-block font-inter">Chart.js</li>
               <li className="border px-2 py-1 inline-block font-inter">Jest-dom</li>
             </ul>
-            <button className="text-white bg-orange2 font-inter font-bold p-3" onClick={() => dispatch(setPopup({ 
+            <button className="text-white bg-orange2 font-inter font-bold p-3 transition-bg hover:bg-orange-700 duration-200" onClick={() => dispatch(setPopup({ 
               title: 'Covid Data',
               description: 'This React-Redux mobile, makes calls to an API to retreive data from the server and puts it into the website in a beautiful UI. It also has a configuration section where you can select the theme of the app, and finally it has a don\'t touch button. Click it under your own risk',
               imgurl: coviddata,
@@ -334,7 +334,7 @@ const Portfolio = ()=> {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[85%] mx-auto">
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/parachutes.jpg')] bg-no-repeat bg-center bg-cover">
+        <div className="text-white relative flex flex-col h-[386px] bg-[url('@/assets/parachutes.jpg')] bg-no-repeat bg-center bg-cover group hover:flex-col-reverse">
           <ProjectCont 
             title={'Parachute Full-stack'} 
             description={'Parachute Full-stack, was a group project deployed by 2 people, where 2 repositories were created, one for the Front-end with React Vite and Redux, and the Back-end with Ruby on Rails. This is supposed to be an app to reserve parachutes, with a user authentication. It is full responsive with mobile and desktop versions, and has all the structure of a Full-stack project.'} 
@@ -344,7 +344,7 @@ const Portfolio = ()=> {
             techs={['React', 'Redux', 'Ruby on Rails', 'vite', 'JWT', 'Tailwind CSS']} 
           />
         </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/spotify.jpg')] bg-no-repeat bg-center bg-cover">
+        <div className="text-white relative flex flex-col h-[386px] bg-[url('@/assets/spotify.jpg')] bg-no-repeat bg-center bg-cover group hover:flex-col-reverse">
           <ProjectCont 
             title={'Spotify-Artist'} 
             description={'This App is designed to connect to the Spotify API, retreive some songs by doing a call with a keyword, and show the data from the songs. You can look for an artist that you might want to know before listening, and it shows all the top songs for the result based on spotify score'}
@@ -354,7 +354,7 @@ const Portfolio = ()=> {
             techs={['Webpack', 'JavaScript', 'CSS', 'HTML']} 
           />
         </div>
-        <div className="relative flex flex-col h-[386px] bg-[url('@/assets/comedy.jpg')] bg-no-repeat bg-center bg-cover">
+        <div className="text-white relative flex flex-col h-[386px] bg-[url('@/assets/comedy.jpg')] bg-no-repeat bg-center bg-cover group hover:flex-col-reverse">
           <ProjectCont 
             title={'Instagram celebrities'} 
             description={'This solo project is a pure JavaScript project based on a topic I love, comedians ;) (These people are real) The project has a Mobile version and it\'s full responsive.'}
@@ -376,8 +376,12 @@ const Portfolio = ()=> {
         <h1 className="font-crete text-5xl text-orange2 ">
           About me
         </h1>
-        <p className="obs transition-colors ease-in-out delay-100 duration-[1000ms] text-base leading-6 font-inter text-white my-6 max-w-[300px] ">I&apos;m a person who discovered his passion to program when I was studing electronic engineering between 2014 and 2018, and after I left, there was a gap where I tried learning how to program videogames, and after that I joined the program to become a Full-Stack Software Developer. <br/> The best atributes you will find in myself are responsability, logical-thinking, problem-solving skills, and adaptability to learn new technologies.</p>
-        <button className="text-white bg-orange2 font-inter font-bold p-3 mb-[220px] mt-auto w-[180px]">Get my resume</button>
+        <p className="obs transition-colors ease-in-out delay-100 duration-[1000ms] text-base leading-6 font-inter text-white my-6 max-w-[300px] ">Frontend developer with a focus on React-Redux, trained at Microverse through 1,500+ hours of remote pair-programming and project-based learning. Comfortable managing complex client-side state, consuming REST APIs, and responsive interfaces. With 3.5 years of Electronic Engineering studies and 2 years programming industrial robots in production, I bring solid debugging instincts and a systems-level way of thinking to frontend problems.</p>
+        <a className="flex mb-[220px] mt-auto" href="https://docs.google.com/document/d/1MG0OxeP2dUY1LbMqE8hKjZTaBMmwm-yFptYbsHGe7vk/edit?usp=sharing" target="_blank">
+          <button className="text-white bg-orange2 font-inter font-bold p-3 w-[180px] transition-bg hover:bg-orange-700 duration-200">
+            Get my resume
+          </button>
+        </a>
         <div className="border-t border-white-400 mb-16"></div>
       </div>
       <div className="flex flex-col w-full bg-black2 pt-[60px] px-[8%] h-[920px] lg:h-[520px]">
@@ -427,7 +431,7 @@ const Portfolio = ()=> {
                   onChange={handleChange}
                 ></textarea>
                 {errorMessage && <p className="text-red-500 font-inter pl-4">{errorMessage}</p>}
-                <button className="mx-auto text-white bg-orange2 font-inter font-bold p-3 mb-[70px] mt-8 w-[160px] md:mx-0" type="submit">
+                <button className="mx-auto text-white bg-orange2 font-inter font-bold p-3 mb-[70px] mt-8 w-[160px] md:mx-0 transition-bg hover:bg-orange-700 duration-200" type="submit">
                   Get in touch
                 </button>
               </form>
@@ -466,7 +470,7 @@ const Portfolio = ()=> {
         </a>
         <a
           className="flex"
-          href="https://wellfound.com/u/gabriel-rozas"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -480,7 +484,7 @@ const Portfolio = ()=> {
         </a>
         <a
           className="flex"
-          href="https://twitter.com/GabrielRozas12"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -494,7 +498,7 @@ const Portfolio = ()=> {
         </a>
         <a
           className="flex"
-          href="https://medium.com/@gabrielrozas1996"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
           target="_blank"
           rel="noopener noreferrer"
         >
