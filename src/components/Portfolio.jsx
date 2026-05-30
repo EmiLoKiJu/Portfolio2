@@ -25,10 +25,10 @@ import Rec1 from '@/assets/Rectangle55.svg';
 import Rec2 from '@/assets/Rectangle56.svg';
 import Rec3 from '@/assets/Rectangle57.svg';
 
-import spotify from '@/assets/spotify.jpg';
+import spotify from '@/assets/ArtistOverall.jpg';
 import parachutes from '@/assets/parachutes.jpg';
 import comedy from '@/assets/comedy.jpg';
-import coviddata from '@/assets/coviddata.jpg';
+import coviddata from '@/assets/CovidData.jpg';
 
 const Portfolio = ()=> {
   const dispatch = useDispatch();
@@ -344,7 +344,7 @@ const Portfolio = ()=> {
             techs={['React', 'Redux', 'Ruby on Rails', 'vite', 'JWT', 'Tailwind CSS']} 
           />
         </div>
-        <div className="text-white relative flex flex-col h-[386px] bg-[url('@/assets/spotify.jpg')] bg-no-repeat bg-center bg-cover group hover:flex-col-reverse">
+        <div className="text-white relative flex flex-col h-[386px] bg-[url('@/assets/ArtistOverall.jpg')] bg-no-repeat bg-center bg-cover group hover:flex-col-reverse">
           <ProjectCont 
             title={'Spotify-Artist'} 
             description={'This App is designed to connect to the Spotify API, retreive some songs by doing a call with a keyword, and show the data from the songs. You can look for an artist that you might want to know before listening, and it shows all the top songs for the result based on spotify score'}
