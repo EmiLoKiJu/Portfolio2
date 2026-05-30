@@ -28,7 +28,7 @@ import Rec3 from '@/assets/Rectangle57.svg';
 import spotify from '@/assets/ArtistOverall.jpg';
 import parachutes from '@/assets/parachutes.jpg';
 import comedy from '@/assets/comedy.jpg';
-import coviddata from '@/assets/CovidData.jpg';
+import coviddata from '@/assets/coviddata.jpg';
 
 const Portfolio = ()=> {
   const dispatch = useDispatch();
