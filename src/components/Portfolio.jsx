@@ -258,7 +258,7 @@ const Portfolio = ()=> {
           </a>
           <a
             className="flex"
-            href="https://wellfound.com/u/gabriel-rozas"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -272,7 +272,7 @@ const Portfolio = ()=> {
           </a>
           <a
             className="flex"
-            href="https://twitter.com/GabrielRozas12"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -286,7 +286,7 @@ const Portfolio = ()=> {
           </a>
           <a
             className="flex"
-            href="https://medium.com/@gabrielrozas1996"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -470,7 +470,7 @@ const Portfolio = ()=> {
         </a>
         <a
           className="flex"
-          href="https://wellfound.com/u/gabriel-rozas"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -484,7 +484,7 @@ const Portfolio = ()=> {
         </a>
         <a
           className="flex"
-          href="https://twitter.com/GabrielRozas12"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -498,7 +498,7 @@ const Portfolio = ()=> {
         </a>
         <a
           className="flex"
-          href="https://medium.com/@gabrielrozas1996"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
           target="_blank"
           rel="noopener noreferrer"
         >
